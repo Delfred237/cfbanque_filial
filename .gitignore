@@ -9,5 +9,3 @@ build/
 .cache/
 .temp/
 tmp/
-
-assets/css/output.css

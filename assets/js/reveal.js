@@ -37,7 +37,7 @@
         const target = entry.target;
 
         // 1. Gérer le compteur si présent
-        const statNumber = target.querySelector(".stat-number");
+        const statNumber = target.querySelector(".counter");
         if (statNumber) countUp(statNumber);
 
         // 2. Gérer le Staggering

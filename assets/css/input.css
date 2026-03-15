@@ -860,7 +860,8 @@
   .feature-item,
   .about-section,
   .service-panel,
-  .industry-link {
+  .industry-link,
+  .step-card {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);

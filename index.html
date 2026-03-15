@@ -632,7 +632,7 @@
               />
               <figcaption class="stat-box">
                 <strong class="stat-number counter">
-                  2K<span class="text-[24px]">+</span>
+                  2<span class="text-[24px]">+</span>
                 </strong>
                 <span class="stat-label">Clients Worldwide</span>
               </figcaption>
@@ -1087,15 +1087,15 @@
       </section>
 
       <!-- ===== HOW WE HELP ===== -->
-      <section class="how-section">
+      <section class="how-section" data-stagger=".step-card">
         <div class="max-w-7xl mx-auto px-6">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="animate-on-scroll">
+            <div class="reveal">
               <p class="section-tag">Steps to Success</p>
               <h2 class="section-title">How We Help Your Business Succeed</h2>
               <div class="divider-gold"></div>
 
-              <div class="step-card mt-8">
+              <div class="step-card mt-8 animate-on-scroll">
                 <div class="step-num">01.</div>
                 <div>
                   <h4
@@ -1111,7 +1111,7 @@
                 </div>
               </div>
 
-              <div class="step-card">
+              <div class="step-card animate-on-scroll delay-200">
                 <div class="step-num">02.</div>
                 <div>
                   <h4
@@ -1127,7 +1127,7 @@
                 </div>
               </div>
 
-              <div class="step-card">
+              <div class="step-card animate-on-scroll delay-300">
                 <div class="step-num">03.</div>
                 <div>
                   <h4
@@ -1149,8 +1149,8 @@
             </div>
 
             <!-- Stats column -->
-            <div class="animate-on-scroll delay-200 text-center">
-              <div class="overflow-hidden rounded-lg group">
+            <div class="reveal delay-200 text-center">
+              <div class="overflow-hidden rounded-lg group animate-on-scroll">
                 <img
                   src="./assets/images/statistic-we-help.jpg"
                   alt="Chart"
@@ -1158,7 +1158,7 @@
                 />
               </div>
               <div
-                class="bg-brand-800 py-12 px-8 rounded-lg shadow-lg relative overflow-hidden"
+                class="bg-brand-800 py-12 px-8 rounded-lg shadow-lg relative overflow-hidden animate-on-scroll delay-200"
               >
                 <div class="absolute inset-0 stats-gradient"></div>
                 <div class="relative z-1">
@@ -1168,7 +1168,7 @@
                     2K+
                   </strong>
                   <div
-                    class="text-base text-neutral-100 tracking-wide uppercase mb-6"
+                    class="text-base text-neutral-100 tracking-[4px] uppercase mb-6"
                   >
                     Clients Served
                   </div>

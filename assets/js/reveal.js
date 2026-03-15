@@ -13,7 +13,7 @@
 
     let count = 0;
 
-    const speed = 2000 / target; // Durée totale de 2 secondes
+    const speed = 1000 / target; // Durée totale de 2 secondes
 
     const updateCount = () => {
       if (count < target) {

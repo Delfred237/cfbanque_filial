@@ -685,7 +685,7 @@
   }
 
   .value-item {
-    @apply p-6 bg-white border-l-4 border-transparent transition-all duration-500 mb-4;
+    @apply p-6 bg-white border-l-4 border-transparent max-sm:text-center transition-all duration-500 mb-4;
   }
 
   .value-item:hover {
@@ -697,10 +697,10 @@
   }
 
   .pillar-card {
-    @apply p-8 cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-103 hover:shadow-2xl;
+    @apply p-8 cursor-pointer transition-transform duration-500 max-sm:text-center hover:z-10 hover:scale-103 hover:shadow-2xl;
   }
 
-  /* ===== QUOTE/GROWTH SECTION ===== */
+  /* ===== HOW WE HELP SECTION ===== */
   .how-section {
     @apply py-25 bg-white;
   }
@@ -710,16 +710,12 @@
   }
 
   .step-card {
-    @apply flex gap-6 items-start p-5 border border-[#e8e4da] mb-4 transition-all duration-300;
+    @apply flex gap-6 max-sm:flex-col max-sm:items-center max-sm:text-center items-start p-5 border border-[#e8e4da] mb-4 transition-all duration-300;
   }
 
   .step-card:hover {
     @apply bg-secondary-400 border-secondary-400 shadow-2xl -translate-y-1;
   }
-
-  /* .step-card:hover {
-    @apply bg-secondary-400 shadow-[0_4px_24px_rgba(0,0,0,0.06)];
-  } */
 
   .step-num {
     @apply font-pro text-[52px] font-bold text-[#e8e4da] leading-none shrink-0 transition-colors duration-500;

@@ -2294,6 +2294,12 @@
     line-height: 1;
     color: var(--color-secondary-400);
     opacity: 10%;
+    @media (width < 40rem) {
+      left: calc(var(--spacing) * 2);
+    }
+    @media (width < 40rem) {
+      font-size: 250px;
+    }
   }
   .testimonial-slide {
     display: none;

@@ -748,7 +748,7 @@
 
   .testimonials::before {
     content: '"';
-    @apply font-pro text-[400px] text-secondary-400 absolute top-0 left-12.5 leading-none opacity-10;
+    @apply font-pro text-[400px] text-secondary-400 max-sm:left-2 max-sm:text-[250px] absolute top-0 left-12.5 leading-none opacity-10;
   }
 
   .testimonial-slide {

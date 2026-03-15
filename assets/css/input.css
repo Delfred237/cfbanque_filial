@@ -692,16 +692,57 @@
     @apply border-l-secondary-400 shadow-[20px_20px_40px_rgba(0,0,0,0.04)] -translate-y-1;
   }
 
-  /* .value-item:hover {
-    @apply border-l-secondary-400 shadow-[0_4px_20px_rgba(0,0,0,0.08)];
-  } */
-
   .value-number {
     @apply text-[11px] font-bold tracking-wider text-secondary-400 mb-2;
   }
 
   .pillar-card {
     @apply p-8 transition-transform duration-500 hover:z-10 hover:scale-[1.03] hover:shadow-2xl;
+  }
+
+  /* ===== QUOTE/GROWTH SECTION ===== */
+  .how-section {
+    @apply py-25 bg-white;
+  }
+
+  .stats-gradient {
+    background: linear-gradient(135deg, rgba(201, 152, 42, 0.08), transparent);
+  }
+
+  .step-card {
+    @apply flex gap-6 items-start p-5 border border-[#e8e4da] mb-4 transition-all duration-300;
+  }
+
+  .step-card:hover {
+    @apply bg-secondary-400 border-secondary-400 shadow-2xl -translate-y-1;
+  }
+
+  /* .step-card:hover {
+    @apply bg-secondary-400 shadow-[0_4px_24px_rgba(0,0,0,0.06)];
+  } */
+
+  .step-num {
+    @apply font-pro text-[52px] font-bold text-[#e8e4da] leading-none shrink-0 transition-colors duration-500;
+  }
+
+  .step-card:hover .step-num {
+    @apply text-white/40;
+  }
+
+  .step-card:hover h4 {
+    @apply text-white;
+  }
+
+  .step-card:hover p {
+    @apply text-white/90;
+  }
+
+  .stats-gradient {
+    background: radial-gradient(
+      circle at top left,
+      rgba(201, 152, 42, 0.15),
+      transparent
+    );
   }
 }
 

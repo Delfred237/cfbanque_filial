@@ -568,13 +568,13 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .tracking-\[4px\] {
+    --tw-tracking: 4px;
+    letter-spacing: 4px;
+  }
   .tracking-tight {
     --tw-tracking: var(--tracking-tight);
     letter-spacing: var(--tracking-tight);
-  }
-  .tracking-wide {
-    --tw-tracking: var(--tracking-wide);
-    letter-spacing: var(--tracking-wide);
   }
   .tracking-wider {
     --tw-tracking: var(--tracking-wider);
@@ -2302,7 +2302,7 @@
       top: 200%;
     }
   }
-  .reveal, .feature-item, .about-section, .service-panel, .industry-link {
+  .reveal, .feature-item, .about-section, .service-panel, .industry-link, .step-card {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);

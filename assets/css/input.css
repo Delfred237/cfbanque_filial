@@ -692,16 +692,12 @@
     @apply border-l-secondary-400 shadow-[20px_20px_40px_rgba(0,0,0,0.04)] -translate-y-1;
   }
 
-  /* .value-item:hover {
-    @apply border-l-secondary-400 shadow-[0_4px_20px_rgba(0,0,0,0.08)];
-  } */
-
   .value-number {
     @apply text-[11px] font-bold tracking-wider text-secondary-400 mb-2;
   }
 
   .pillar-card {
-    @apply p-8 transition-transform duration-500 hover:z-10 hover:scale-[1.03] hover:shadow-2xl;
+    @apply p-8 cursor-pointer transition-transform duration-500 hover:z-10 hover:scale-103 hover:shadow-2xl;
   }
 }
 

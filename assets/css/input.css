@@ -775,6 +775,78 @@
   .slider-dot.active {
     @apply w-10 bg-secondary-400 border-secondary-400;
   }
+
+  /* ===== CONTACT SECTION ===== */
+  .svg-container {
+    @apply w-11 h-11 bg-[rgba(201,152,42,0.1)] flex items-center justify-center shrink-0 text-secondary-400;
+  }
+
+  .contact-cta {
+    @apply py-25 bg-white;
+  }
+
+  .contact-label {
+    @apply flex items-center gap-4 mb-3;
+  }
+
+  .contact-label::before {
+    content: "";
+    @apply w-8 h-0.5 bg-secondary-400;
+  }
+
+  .benefit-item {
+    @apply flex items-start gap-3.5 p-3.5 border-b border-[#f0ede6];
+  }
+
+  .benefit-icon {
+    @apply w-6 h-6 bg-[rgba(201, 152, 42, 0.1)] border border-secondary-400 flex items-center justify-center text-secondary-400 text-sm shrink-0;
+  }
+
+  /* Multi-step form */
+  .form-step {
+    @apply hidden opacity-0 translate-x-4 transition-all duration-500;
+  }
+
+  .form-step.active {
+    @apply block opacity-100 translate-x-0;
+  }
+
+  .step-indicators {
+    @apply flex gap-0 mb-8 bg-amber-300;
+  }
+
+  /* .step-indicator {
+    @apply flex-1 p-3 text-center text-[13px] font-medium text-[#999] bg-[#f8f7f4] border-b border-[#e0dbd0] cursor-pointer;
+  }
+
+  .step-indicator.active {
+    @apply text-secondary-400 bg-white border-b border-secondary-400;
+  } */
+
+  .step-indicator {
+    @apply flex-1 py-4 text-[11px] font-bold uppercase tracking-widest text-gray-400 
+           bg-gray-50 border-b-2 border-gray-200 transition-colors duration-300;
+  }
+
+  .step-indicator.active {
+    @apply text-brand-900 bg-white border-b-secondary-400;
+  }
+
+  .form-options {
+    @apply flex flex-wrap gap-3 mb-6;
+  }
+
+  .form-option {
+    @apply py-3 px-5 border-2 border-[#e0dbd0] text-sm cursor-pointer transition-all duration-300 bg-white hover:border-secondary-400 active:scale-95 select-none;
+  }
+
+  form-option.selected {
+    @apply border-secondary-400 text-secondary-400 bg-secondary-400/5 shadow-inner;
+  }
+
+  /* .form-option.selected {
+    @apply border-secondary-400 text-secondary-400 bg-[rgba(201,152,42,0.05)];
+  } */
 }
 
 /* ============================ Utilities ============================ */

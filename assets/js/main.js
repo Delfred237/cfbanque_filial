@@ -51,3 +51,31 @@ function goToTestimonial(n) {
 setInterval(() => {
   goToTestimonial((currentTestimonial + 1) % testimonials.length);
 }, 5000);
+
+// ===== MULTI-STEP FORM =====
+function nextFormStep(current) {
+  document.getElementById("fs-" + current).classList.remove("active");
+  document.getElementById("si-" + current).classList.remove("active");
+  document.getElementById("fs-" + (current + 1)).classList.add("active");
+  document.getElementById("si-" + (current + 1)).classList.add("active");
+}
+
+function prevFormStep(current) {
+  document.getElementById("fs-" + current).classList.remove("active");
+  document.getElementById("si-" + current).classList.remove("active");
+  document.getElementById("fs-" + (current - 1)).classList.add("active");
+  document.getElementById("si-" + (current - 1)).classList.add("active");
+}
+
+function submitForm() {
+  document.getElementById("fs-3").classList.remove("active");
+  document.querySelector(".step-indicators").style.display = "none";
+  document.getElementById("formSuccess").style.display = "block";
+}
+
+function selectOption(el) {
+  // Allow toggle in same group
+  const siblings = el.parentElement.querySelectorAll(".form-option");
+  siblings.forEach((s) => s.classList.remove("selected"));
+  el.classList.add("selected");
+}

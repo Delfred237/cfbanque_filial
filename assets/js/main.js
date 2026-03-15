@@ -34,3 +34,20 @@ document.querySelector(".slider-arrows").addEventListener("click", () => {
   clearInterval(autoSlide);
   autoSlide = setInterval(nextSlide, 8000);
 });
+
+// ===== TESTIMONIALS =====
+let currentTestimonial = 0;
+const testimonials = document.querySelectorAll(".testimonial-slide");
+const tdots = document.querySelectorAll('[id^="tdot-"]');
+
+function goToTestimonial(n) {
+  testimonials[currentTestimonial].classList.remove("active");
+  tdots[currentTestimonial].classList.remove("active");
+  currentTestimonial = n;
+  testimonials[currentTestimonial].classList.add("active");
+  tdots[currentTestimonial].classList.add("active");
+}
+
+setInterval(() => {
+  goToTestimonial((currentTestimonial + 1) % testimonials.length);
+}, 5000);

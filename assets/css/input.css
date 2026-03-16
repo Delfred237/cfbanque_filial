@@ -776,6 +776,7 @@
     @apply w-10 bg-secondary-400 border-secondary-400;
   }
 
+<<<<<<< HEAD
   /* ===== FOOTER SECTION ===== */
   .footer {
     @apply bg-brand-800 pt-20 pb-0;
@@ -795,6 +796,72 @@
 
   .social-btn:hover {
     @apply bg-secondary-400 border-secondary-400 text-white;
+=======
+  /* ===== CONTACT SECTION ===== */
+  .svg-container {
+    @apply w-11 h-11 bg-[rgba(201,152,42,0.1)] flex items-center justify-center shrink-0 text-secondary-400;
+  }
+
+  .contact-cta {
+    @apply py-25 bg-white;
+  }
+
+  .contact-label {
+    @apply flex items-center gap-4 mb-3;
+  }
+
+  .contact-label::before {
+    content: "";
+    @apply w-8 h-0.5 bg-secondary-400;
+  }
+
+  .benefit-item {
+    @apply flex items-start gap-3.5 p-3.5 border-b border-[#f0ede6] opacity-0 translate-y-4 transition-all duration-500;
+  }
+
+  .benefit-item.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .benefit-icon {
+    @apply w-6 h-6 bg-[rgba(201,152,42,0.1)] border border-secondary-400 flex items-center justify-center text-secondary-400 text-sm shrink-0;
+  }
+
+  /* Multi-step form */
+  .form-step {
+    @apply hidden opacity-0 translate-x-7.5 duration-500;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .form-step.active {
+    @apply block opacity-100 translate-x-0;
+    animation: slideInForm 0.5s ease-out forwards;
+  }
+
+  .step-indicators {
+    @apply flex gap-0 mb-8 bg-amber-300;
+  }
+
+  .step-indicator {
+    @apply flex-1 py-4 text-[11px] font-bold text-center uppercase tracking-widest text-gray-400 
+           bg-gray-50 border-b-2 border-gray-200 transition-colors duration-300;
+  }
+
+  .step-indicator.active {
+    @apply text-brand-900 bg-white border-b-secondary-400;
+  }
+
+  .form-options {
+    @apply flex flex-wrap gap-3 mb-6;
+  }
+
+  .form-option {
+    @apply py-3 px-5 border-2 border-[#e0dbd0] text-sm cursor-pointer transition-all duration-300 bg-white hover:border-secondary-400 active:scale-95 select-none;
+  }
+
+  .form-option.selected {
+    @apply border-secondary-400 text-secondary-400 bg-secondary-400/5 shadow-inner;
+>>>>>>> feature-contact
   }
 }
 
@@ -913,7 +980,8 @@
   .about-section,
   .service-panel,
   .industry-link,
-  .step-card {
+  .step-card,
+  .benefit-item {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);
@@ -944,6 +1012,17 @@
     to {
       opacity: 1;
       transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInForm {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

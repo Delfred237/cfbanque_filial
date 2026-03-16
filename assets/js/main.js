@@ -53,29 +53,70 @@ setInterval(() => {
 }, 5000);
 
 // ===== MULTI-STEP FORM =====
-function nextFormStep(current) {
-  document.getElementById("fs-" + current).classList.remove("active");
-  document.getElementById("si-" + current).classList.remove("active");
-  document.getElementById("fs-" + (current + 1)).classList.add("active");
-  document.getElementById("si-" + (current + 1)).classList.add("active");
-}
+window.nextFormStep = function (current) {
+  const currentStep = document.getElementById(`fs-${current}`);
+  const nextStep = document.getElementById(`fs-${current + 1}`);
+  const currentInd = document.getElementById(`si-${current}`);
+  const nextInd = document.getElementById(`si-${current + 1}`);
 
-function prevFormStep(current) {
-  document.getElementById("fs-" + current).classList.remove("active");
-  document.getElementById("si-" + current).classList.remove("active");
-  document.getElementById("fs-" + (current - 1)).classList.add("active");
-  document.getElementById("si-" + (current - 1)).classList.add("active");
-}
+  if (nextStep) {
+    // 1. Sortie de l'étape actuelle
+    currentStep.style.opacity = "0";
+    currentStep.style.transform = "translateX(-20px)";
 
-function submitForm() {
-  document.getElementById("fs-3").classList.remove("active");
-  document.querySelector(".step-indicators").style.display = "none";
-  document.getElementById("formSuccess").style.display = "block";
-}
+    setTimeout(() => {
+      currentStep.classList.remove("active");
+      currentInd.classList.remove("active");
 
-function selectOption(el) {
-  // Allow toggle in same group
-  const siblings = el.parentElement.querySelectorAll(".form-option");
+      // 2. Entrée de la nouvelle étape
+      nextStep.classList.add("active");
+      nextInd.classList.add("active");
+    }, 300); // On attend la fin de la transition de sortie
+  }
+};
+
+window.prevFormStep = function (current) {
+  const currentStep = document.getElementById(`fs-${current}`);
+  const prevStep = document.getElementById(`fs-${current - 1}`);
+  const currentInd = document.getElementById(`si-${current}`);
+  const prevInd = document.getElementById(`si-${current - 1}`);
+
+  if (prevStep) {
+    currentStep.style.opacity = "0";
+    currentStep.style.transform = "translateX(20px)";
+
+    setTimeout(() => {
+      currentStep.classList.remove("active");
+      currentInd.classList.remove("active");
+      prevStep.classList.add("active");
+      prevInd.classList.add("active");
+    }, 300);
+  }
+};
+
+window.selectOption = function (el) {
+  // Gestion de la sélection unique par groupe
+  const parent = el.closest(".form-options");
+  const siblings = parent.querySelectorAll(".form-option");
   siblings.forEach((s) => s.classList.remove("selected"));
   el.classList.add("selected");
-}
+};
+
+window.submitForm = function () {
+  const step3 = document.getElementById("fs-3");
+  const indicators = document.querySelector(".step-indicators");
+  const successMsg = document.getElementById("formSuccess");
+  const formTitle = successMsg.closest(".bg-[#f8f7f4]").querySelector("h3");
+
+  if (step3 && successMsg) {
+    step3.classList.remove("active");
+    if (indicators) indicators.style.display = "none";
+    if (formTitle) formTitle.style.display = "none";
+
+    successMsg.classList.remove("hidden");
+    successMsg.classList.add("block");
+
+    // Optionnel : Reset du formulaire ou redirection après 5s
+    console.log("Formulaire envoyé avec succès !");
+  }
+};

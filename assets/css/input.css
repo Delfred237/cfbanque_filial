@@ -125,6 +125,10 @@
     @apply bg-brand-700 py-2 px-0 text-sm hidden sm:block;
   }
 
+  .top-bar.scrolled {
+    @apply hidden;
+  }
+
   /* ── Social buttons ── */
   .social-btn {
     @apply relative overflow-hidden z-10 w-9 h-9 flex items-center justify-center 
@@ -146,7 +150,7 @@
   }
 
   /* ── Navbar ── */
-  .navbar {
+  /* .navbar {
     @apply bg-white shadow-[0_2px_20px_rgba(0,0,0,0.08)] sticky top-0 left-0 w-full z-1000 translate-y-0;
     transition:
       transform 0.35s cubic-bezier(0.32, 0.72, 0, 1),
@@ -159,6 +163,33 @@
     background-color: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+  } */
+
+  .navbar {
+    @apply fixed top-0 left-0 w-full z-1000 bg-white;
+    transition:
+      box-shadow 0.3s ease,
+      background-color 0.3s ease,
+      transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+    animation: navDown 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  /* État quand on scrolle */
+  .navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 24px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Si tu veux que la navbar devienne plus petite au scroll */
+  .navbar.scrolled .max-w-7xl {
+    @apply h-16; /* Passe de h-20 à h-16 */
+  }
+
+  .navbar.scrolled img {
+    @apply w-32; /* Réduit de w-40 à w-32 */
+    transition: width 0.3s ease;
   }
 
   /* ── Desktop nav link ── */
@@ -776,14 +807,13 @@
     @apply w-10 bg-secondary-400 border-secondary-400;
   }
 
-<<<<<<< HEAD
   /* ===== FOOTER SECTION ===== */
   .footer {
     @apply bg-brand-800 pt-20 pb-0;
   }
 
   .footer-link {
-    @apply block py-1.5 text-[13px] text-[rgba(255,255,255,0.5)] transition-colors duration-300;
+    @apply block py-1.5 text-[13px] text-[rgba(255,255,255,0.6)] transition-colors duration-300;
   }
 
   .footer-link:hover {
@@ -791,12 +821,13 @@
   }
 
   .social-btn {
-    @apply w-6 h-6 border border-[rgba(255,255,255,0.15)] flex items-center justify-center text-[rgba(255,255,255,0.15)] text-sm cursor-pointer transition-all duration-300;
+    @apply w-6 h-6 border border-[rgba(255,255,255,0.5)] flex items-center justify-center text-[rgba(255,255,255,0.5)] text-sm cursor-pointer transition-all duration-300;
   }
 
   .social-btn:hover {
     @apply bg-secondary-400 border-secondary-400 text-white;
-=======
+  }
+
   /* ===== CONTACT SECTION ===== */
   .svg-container {
     @apply w-11 h-11 bg-[rgba(201,152,42,0.1)] flex items-center justify-center shrink-0 text-secondary-400;
@@ -861,7 +892,6 @@
 
   .form-option.selected {
     @apply border-secondary-400 text-secondary-400 bg-secondary-400/5 shadow-inner;
->>>>>>> feature-contact
   }
 }
 
@@ -882,6 +912,15 @@
 
   .nav-link:hover::after {
     width: 60%;
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(0);
+    }
   }
 
   /* Desktop dropdown hover open */

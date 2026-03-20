@@ -602,7 +602,7 @@
   }
 
   .service-tabs {
-    @apply flex border-b-2 border-gray-100 mb-12 relative max-sm:border-b-0 max-[1025px]:overflow-x-auto max-sm:pb-2;
+    @apply flex justify-center border-b-2 border-gray-100 mb-12 relative max-sm:border-b-0 max-[1025px]:overflow-x-auto max-sm:pb-2;
   }
 
   .service-tab {
@@ -895,12 +895,13 @@
     @apply border-secondary-400 text-secondary-400 bg-secondary-400/5 shadow-inner;
   }
 
-  /* ===== ABOUT PAGE STYLE ===== */
-  .page-hero {
+  /* ====================== ABOUT PAGE STYLE ====================== */
+  .page-hero-about,
+  .page-hero-services {
     @apply bg-brand-800 pt-30 pb-20 relative overflow-hidden;
   }
 
-  .page-hero::before {
+  .page-hero-about::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -909,7 +910,17 @@
     animation: ken-burns 10s ease-out infinite forwards;
   }
 
-  .page-hero::after {
+  .page-hero-services::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/service_landing_page.jpg") center/cover no-repeat;
+    transform: scale(1);
+    animation: ken-burns 10s ease-out infinite forwards;
+  }
+
+  .page-hero-about::after,
+  .page-hero-services::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1076,19 +1087,82 @@
     @apply bg-white py-20 relative overflow-hidden;
   }
 
-  .cta-banner::before {
-    content: "";
-    @apply absolute inset-0;
-    background: linear-gradient(
-      135deg,
-      rgba(201, 152, 42, 0.08) 0%,
-      transparent 60%
-    );
-  }
-
   .cta-subtitle {
     @apply font-pro font-bold text-brand-700 mb-5 leading-[1.2];
     font-size: clamp(28px, 3.5vw, 44px);
+  }
+
+  /* ====================== SERVICES PAGE STYLE ====================== */
+  .service-block {
+    @apply py-20;
+  }
+
+  .service-block:nth-child(even) {
+    background: #f8f7f4;
+  }
+  .service-block:nth-child(odd) {
+    background: white;
+  }
+
+  .service-number {
+    @apply font-pro text-[100px] font-bold text-[rgba(201,152,42,0.08)] leading-none absolute -top-5 right-0 pointer-events-none;
+  }
+
+  .service-tag {
+    @apply inline-block bg-[rgba(201,152,42,0.1)] text-secondary-400 px-3.5 py-1.5 mb-4 font-bold text-[11px] uppercase tracking-widest;
+  }
+
+  .service-list li {
+    @apply flex items-center gap-2.5 py-2.5 text-sm text-[#555] border-b border-[#f0f0f0];
+  }
+
+  .service-list li::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--color-secondary-400);
+    flex-shrink: 0;
+    border-radius: 50%;
+  }
+
+  .service-img-wrapper {
+    @apply relative overflow-hidden;
+  }
+
+  .service-img-wrapper img {
+    @apply w-full h-100 object-cover transition-transform duration-500;
+  }
+
+  .service-img-wrapper:hover img {
+    @apply scale-115;
+  }
+
+  .service-img-accent {
+    @apply absolute -bottom-0.75 left-0 right-0 h-1.5 bg-secondary-400;
+  }
+
+  .service-card-sm {
+    @apply p-8 border border-[#e8e4da] bg-white flex flex-col transition-all duration-500 relative overflow-hidden h-full
+        hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2 max-sm:items-center max-sm:text-center;
+  }
+
+  .service-card-sm::before {
+    content: "";
+    @apply absolute bottom-0 left-0 w-full h-1 bg-secondary-400 origin-left scale-x-0 transition-transform duration-500 ease-out;
+  }
+
+  .service-card-sm:hover::before {
+    @apply scale-x-100;
+  }
+
+  .service-icon {
+    @apply w-12 h-12 bg-secondary-400/5 text-secondary-400 flex items-center justify-center rounded-full mb-6 
+           border border-secondary-400/20 transition-all duration-500 ease-out;
+  }
+
+  .service-card-sm:hover .service-icon {
+    @apply bg-secondary-400 text-white border-secondary-400 shadow-[0_0_20px_rgba(201,152,42,0.3)];
+    transform: rotateY(180deg);
   }
 }
 
@@ -1220,7 +1294,8 @@
   .benefit-item,
   .stat-item,
   .value-card,
-  .timeline-item {
+  .timeline-item,
+  .service-card-sm {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);

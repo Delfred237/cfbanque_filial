@@ -299,7 +299,9 @@
 
   /* Accordion wrapper */
   .drawer-accordion {
-    @apply rounded-lg overflow-hidden mb-1;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 4px;
     opacity: 0;
     transform: translateX(20px);
     transition:
@@ -658,7 +660,7 @@
 
   .industries::before {
     content: "";
-    @apply absolute inset-0 bg-[url('../images/industrie-bg.jpg')] bg-fixed bg-cover bg-center opacity-10 pointer-events-none;
+    @apply absolute inset-0 bg-[url('../images/industrie-bg.webp')] bg-fixed bg-cover bg-center opacity-30 pointer-events-none;
     /* Petit dégradé radial pour assombrir les bords */
     background-blend-mode: multiply;
     background-color: theme("colors.brand.900");

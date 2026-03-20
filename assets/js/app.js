@@ -155,18 +155,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ─── 6. ANIMATIONS REVEAL & COMPTEURS ─── */
   const countUp = (el) => {
-    const target = parseInt(el.innerText);
+    // On récupère la cible depuis data-target, sinon on fallback sur le texte
+    const target =
+      parseInt(el.getAttribute("data-target")) || parseInt(el.innerText);
+    if (isNaN(target)) return;
+
     let count = 0;
-    const speed = 1000 / target;
+    // On calcule une durée fixe (ex: 2 secondes) pour que les petits et grands nombres finissent en même temps
+    const duration = 2000;
+    const frameRate = 1000 / 60; // 60 images par seconde
+    const totalFrames = Math.round(duration / frameRate);
+    const increment = target / totalFrames;
+
     const updateCount = () => {
+      count += increment;
+
       if (count < target) {
-        count++;
-        el.innerText = count + (target > 999 ? "K" : "");
-        setTimeout(updateCount, speed);
+        // Affichage formaté : si > 999 on divise par 1000 et on ajoute "K"
+        if (target > 999) {
+          el.innerText = (count / 1000).toFixed(1) + "K";
+        } else {
+          el.innerText = Math.floor(count);
+        }
+        requestAnimationFrame(updateCount); // Plus performant que setTimeout
       } else {
-        el.innerText = target + (target > 999 ? "K" : "");
+        // Valeur finale exacte
+        el.innerText = target > 999 ? (target / 1000).toFixed(0) + "K" : target;
       }
     };
+
     updateCount();
   };
 
@@ -262,4 +279,27 @@ document.addEventListener("DOMContentLoaded", () => {
       successMsg.classList.add("block");
     }
   };
+
+  /* ─── 8. ACCORDEON MOBILE (MENU MORE) ─── */
+  const accordionTrigger = document.querySelector(".accordion-trigger");
+  const accordionBody = document.querySelector(".accordion-body");
+
+  if (accordionTrigger && accordionBody) {
+    accordionTrigger.addEventListener("click", () => {
+      const isOpen = accordionBody.classList.contains("is-open");
+
+      // 1. Gestion de l'accessibilité
+      accordionTrigger.setAttribute("aria-expanded", !isOpen);
+
+      // 2. Toggle de la classe pour l'animation CSS (max-height)
+      accordionBody.classList.toggle("is-open");
+
+      // 3. Rotation de la flèche (gérée par ton CSS via aria-expanded)
+      // Si tu veux forcer la rotation en JS :
+      const arrow = accordionTrigger.querySelector(".accordion-arrow");
+      if (arrow) {
+        arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+      }
+    });
+  }
 });

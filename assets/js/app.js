@@ -155,37 +155,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ─── 6. ANIMATIONS REVEAL & COMPTEURS ─── */
   const countUp = (el) => {
-    // On récupère la cible depuis data-target, sinon on fallback sur le texte
-    const target =
-      parseInt(el.getAttribute("data-target")) || parseInt(el.innerText);
+    const targetStr =
+      el.getAttribute("data-target") || el.innerText.replace(/[^0-9]/g, "");
+    const target = parseInt(targetStr);
     if (isNaN(target)) return;
 
     let count = 0;
-    // On calcule une durée fixe (ex: 2 secondes) pour que les petits et grands nombres finissent en même temps
     const duration = 2000;
-    const frameRate = 1000 / 60; // 60 images par seconde
+    const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     const increment = target / totalFrames;
 
     const updateCount = () => {
       count += increment;
-
       if (count < target) {
-        // Affichage formaté : si > 999 on divise par 1000 et on ajoute "K"
-        if (target > 999) {
-          el.innerText = (count / 1000).toFixed(1) + "K";
-        } else {
-          el.innerText = Math.floor(count);
-        }
-        requestAnimationFrame(updateCount); // Plus performant que setTimeout
+        el.innerText = Math.floor(count) + (target > 100 ? "+" : "");
+        requestAnimationFrame(updateCount);
       } else {
-        // Valeur finale exacte
-        el.innerText = target > 999 ? (target / 1000).toFixed(0) + "K" : target;
+        // Formatage final (Ex: 1000 -> 1K+)
+        el.innerText =
+          target >= 1000
+            ? (target / 1000).toFixed(0) + "K+"
+            : target + (target > 1 ? "+" : "");
       }
     };
-
     updateCount();
   };
+  // const countUp = (el) => {
+  //   // On récupère la cible depuis data-target, sinon on fallback sur le texte
+  //   const target =
+  //     parseInt(el.getAttribute("data-target")) || parseInt(el.innerText);
+  //   if (isNaN(target)) return;
+
+  //   let count = 0;
+  //   // On calcule une durée fixe (ex: 2 secondes) pour que les petits et grands nombres finissent en même temps
+  //   const duration = 2000;
+  //   const frameRate = 1000 / 60; // 60 images par seconde
+  //   const totalFrames = Math.round(duration / frameRate);
+  //   const increment = target / totalFrames;
+
+  //   const updateCount = () => {
+  //     count += increment;
+
+  //     if (count < target) {
+  //       // Affichage formaté : si > 999 on divise par 1000 et on ajoute "K"
+  //       if (target > 999) {
+  //         el.innerText = (count / 1000).toFixed(1) + "K";
+  //       } else {
+  //         el.innerText = Math.floor(count);
+  //       }
+  //       requestAnimationFrame(updateCount); // Plus performant que setTimeout
+  //     } else {
+  //       // Valeur finale exacte
+  //       el.innerText = target > 999 ? (target / 1000).toFixed(0) + "K" : target;
+  //     }
+  //   };
+
+  //   updateCount();
+  // };
 
   const revealObserver = new IntersectionObserver(
     (entries, observer) => {

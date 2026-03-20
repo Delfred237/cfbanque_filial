@@ -47,12 +47,18 @@ international capital markets for African enterprises."
     />
 
     <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap&family=DM+Sans:wght@300;400;500;600&display=swap"
+      onload="this.rel = 'stylesheet'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap&family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
 
     <!-- favicon -->
     <link
@@ -75,7 +81,15 @@ international capital markets for African enterprises."
     <link rel="manifest" href="./assets/images/favicon/site.webmanifest" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./assets/css/output.css" />
+    <link
+      rel="preload"
+      href="./assets/css/output.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="./assets/css/output.css"
+    /></noscript>
 
     <!-- font awesome script -->
     <script
@@ -177,7 +191,7 @@ international capital markets for African enterprises."
           <a href="#" class="flex justify-start">
             <img
               class="w-40 max-sm:w-26"
-              src="./assets/images/logo.png"
+              src="./assets/images/logo.webp"
               alt="Chartered Logo"
               loading="lazy"
               decoding="async"
@@ -271,8 +285,8 @@ international capital markets for African enterprises."
         <div class="drawer-header">
           <img
             class="w-32"
-            src="./assets/images/logo.png"
-            alt="CFBanque Logo"
+            src="./assets/images/logo.webp"
+            alt="Chartered Logo"
           />
           <button id="drawerClose" class="drawer-close" aria-label="Close menu">
             <svg
@@ -631,7 +645,7 @@ international capital markets for African enterprises."
             <!-- Image -->
             <figure class="about-image-wrapper animate-on-scroll">
               <img
-                src="./assets/images/about.jpg"
+                src="./assets/images/about.webp"
                 alt="Chartered Financial Investment - About"
                 loading="lazy"
                 decoding="async"
@@ -747,7 +761,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel active" id="service-0">
             <img
-              src="./assets/images/strategic_financial.jpg"
+              src="./assets/images/strategic_financial.webp"
               alt="Banking"
               class="service-img"
             />
@@ -780,7 +794,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel" id="service-1">
             <img
-              src="./assets/images/capital_raising.jpg"
+              src="./assets/images/capital_raising.webp"
               alt="Digital"
               class="service-img"
             />
@@ -812,7 +826,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel" id="service-2">
             <img
-              src="./assets/images/merge_acquisition.jpg"
+              src="./assets/images/merge_acquisition.webp"
               alt="Consulting"
               class="service-img"
             />
@@ -844,7 +858,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel" id="service-3">
             <img
-              src="./assets/images/institutional_structuring.jpg"
+              src="./assets/images/institutional_structuring.webp"
               alt="Client"
               class="service-img"
             />
@@ -872,7 +886,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel" id="service-4">
             <img
-              src="./assets/images/infrastructure.jpg"
+              src="./assets/images/infrastructure.webp"
               alt="Client"
               class="service-img"
             />
@@ -900,7 +914,7 @@ international capital markets for African enterprises."
 
           <div class="service-panel" id="service-5">
             <img
-              src="./assets/images/client_first.jpg"
+              src="./assets/images/client_first.webp"
               alt="Client"
               class="service-img"
             />
@@ -979,14 +993,14 @@ international capital markets for African enterprises."
             <div class="reveal">
               <div class="flex items-center gap-4 mb-2">
                 <img
-                  src="https://cfbanque.com/wp-content/uploads/2024/06/h1-11.webp"
+                  src="./assets/images/ceo.webp"
                   alt="CEO"
                   class="w-20 h-20 object-cover rounded-[50%] border-3 border-secondary-400"
                   onerror="this.style.display = 'none'"
                 />
                 <div>
                   <div class="text-[13px] text-[#999] tracking-tight">
-                    1 YEAR
+                    PAN-AFRICAN FINANCIAL PLATFORM
                   </div>
                   <div class="font-pro text-[20px] font-bold text-brand-800">
                     Growing With Our Clients
@@ -1160,7 +1174,7 @@ international capital markets for African enterprises."
 
               <div class="mt-8 overflow-hidden rounded-sm group">
                 <img
-                  src="https://cfbanque.com/wp-content/uploads/2024/06/h1-10.webp"
+                  src="./assets/images/growth.webp"
                   alt="Success"
                   class="w-full h-60 object-cover transition-transform duration-1000 group-hover:scale-110"
                   onerror="
@@ -1191,7 +1205,7 @@ international capital markets for African enterprises."
                   <h4
                     class="font-pro text-[18px] font-bold text-brand-800 mt-2"
                   >
-                    Our Strategic Approach to Financial Transformation
+                    Strategic Financial Diagnosis
                   </h4>
                   <p class="text-sm text-[#666] leading-[1.7]">
                     We begin with an in-depth analysis of your company’s
@@ -1246,7 +1260,7 @@ international capital markets for African enterprises."
             <div class="reveal delay-200 text-center">
               <div class="overflow-hidden rounded-lg group animate-on-scroll">
                 <img
-                  src="./assets/images/statistic-we-help.jpg"
+                  src="./assets/images/statistic-we-help.webp"
                   alt="Chart"
                   class="max-w-full max-lg:w-full h-auto mb-8 object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -1284,9 +1298,9 @@ international capital markets for African enterprises."
       <!-- ===== TESTIMONIALS ===== -->
       <section class="testimonials">
         <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
-          <p class="section-tag">Testimonials</p>
+          <p class="section-tag">Institutional Vision</p>
           <h2 class="section-title text-white mb-2 leading-tight">
-            What Our Clients Say
+            Building Trusted Financial Architectures for Africa
           </h2>
           <p class="text-sm mb-13 text-neutral-300">
             More than 99% customer satisfaction is our success.
@@ -1295,11 +1309,11 @@ international capital markets for African enterprises."
           <div id="testimonialContainer">
             <div class="testimonial-slide active">
               <p class="testimonial-text">
-                "Giles and his team at Chartered Business Consulting have been
-                absolutely great to work with and they definitely have gone
-                above and beyond for us by streamlining all of our accounts so
-                that we can focus on what we do love to do and continue to grow
-                our business."
+                "Africa’s next generation of enterprises requires more than
+                capital. It requires credible financial architectures capable of
+                connecting local ambition with global investment ecosystems. Our
+                mission is to design those structures and help African companies
+                access sustainable international growth."
               </p>
               <div class="flex flex-col items-center gap-3">
                 <img
@@ -1323,10 +1337,11 @@ international capital markets for African enterprises."
 
             <div class="testimonial-slide">
               <p class="testimonial-text">
-                "The team's expertise in investment banking and financial
-                advisory has been transformative for our organization. They
-                provided clear, actionable strategies that directly contributed
-                to our growth and expansion."
+                "Many African companies possess extraordinary potential but lack
+                the financial structures required by global investors. By
+                aligning governance, financial reporting, and capital strategy
+                with international standards, we help enterprises become
+                credible partners for institutional investment."
               </p>
               <div class="flex flex-col items-center gap-3">
                 <img
@@ -1336,10 +1351,10 @@ international capital markets for African enterprises."
                 />
                 <div>
                   <div class="font-pro text-base font-bold text-white">
-                    James Davidson
+                    Strategic Advisory Team
                   </div>
                   <div class="text-[12px] text-neutral-300 tracking-[1px]">
-                    CEO, Global Finance Corp.
+                    Financial Architecture Division
                   </div>
                 </div>
                 <div class="flex gap-1 mt-1 text-secondary-400 text-sm">
@@ -1350,10 +1365,11 @@ international capital markets for African enterprises."
 
             <div class="testimonial-slide">
               <p class="testimonial-text">
-                "Chartered Financial Investment approach to wealth management is
-                second to none. Their personalized service and deep market
-                knowledge gave us confidence to make bold investment decisions
-                that paid off significantly."
+                "Access to international capital markets begins with
+                credibility. Through rigorous financial structuring, governance
+                frameworks, and institutional advisory, we connect African
+                enterprises with global investment ecosystems, sovereign funds,
+                and long-term financing opportunities."
               </p>
               <div class="flex flex-col items-center gap-3">
                 <img
@@ -1363,10 +1379,10 @@ international capital markets for African enterprises."
                 />
                 <div>
                   <div class="font-pro text-base font-bold text-white">
-                    Sophie Laurent
+                    Investment Strategy Team
                   </div>
                   <div class="text-[12px] text-neutral-300 tracking-[1px]">
-                    CFO, Meridian Capital Group
+                    Capital Markets Integration
                   </div>
                 </div>
                 <div class="flex gap-1 mt-1 text-secondary-400 text-sm">
@@ -1906,7 +1922,7 @@ international capital markets for African enterprises."
       {
         "@context": "https://schema.org",
         "@type": "FinancialService",
-        "name": "CFBanque",
+        "name": "Chartered Financial Investment",
         "url": "https://www.chartered.com",
         "logo": "https://www.chartered.com/assets/images/logo.png",
         "sameAs": [
@@ -1916,17 +1932,7 @@ international capital markets for African enterprises."
       }
     </script>
 
-    <!-- Navbar js  -->
-    <script src="./assets/js/navbar.js"></script>
-
-    <!-- Slider Js  -->
-    <script src="./assets/js/main.js"></script>
-
-    <!-- Reval Js -->
-    <script src="./assets/js/reveal.js"></script>
-    <script src="./assets/js/reveal-service.js"></script>
-
-    <!-- Tabs Js  -->
-    <script src="./assets/js/tabs.js"></script>
+    <!-- JS -->
+    <script src="./assets/js/app.js" defer></script>
   </body>
 </html>

@@ -897,7 +897,8 @@
 
   /* ====================== ABOUT PAGE STYLE ====================== */
   .page-hero-about,
-  .page-hero-services {
+  .page-hero-services,
+  .page-hero-markets {
     @apply bg-brand-800 pt-30 pb-20 relative overflow-hidden;
   }
 
@@ -919,8 +920,19 @@
     animation: ken-burns 10s ease-out infinite forwards;
   }
 
+  .page-hero-markets::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/connecting_landing_page.jpg") center/cover
+      no-repeat;
+    transform: scale(1);
+    animation: ken-burns 10s ease-out infinite forwards;
+  }
+
   .page-hero-about::after,
-  .page-hero-services::after {
+  .page-hero-services::after,
+  .page-hero-markets::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1019,7 +1031,7 @@
   }
 
   .value-card {
-    @apply relative overflow-hidden py-10 px-8 border border-[#e8e4da] bg-white transition-all duration-300
+    @apply relative flex flex-col max-sm:items-center overflow-hidden py-10 px-8 border border-[#e8e4da] bg-white transition-all duration-300
       hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)] hover:-translate-y-2;
   }
 
@@ -1042,7 +1054,7 @@
   }
 
   .value-card p {
-    @apply text-gray-500 text-[13px] leading-[1.7] text-left;
+    @apply text-gray-500 text-[13px] leading-[1.7] text-left  max-sm:text-center;
   }
 
   .value-icon svg {
@@ -1163,6 +1175,94 @@
   .service-card-sm:hover .service-icon {
     @apply bg-secondary-400 text-white border-secondary-400 shadow-[0_0_20px_rgba(201,152,42,0.3)];
     transform: rotateY(180deg);
+  }
+
+  /* ====================== MARKETS PAGE STYLE ====================== */
+  .markets-tabs {
+    @apply flex flex-col gap-0;
+  }
+
+  .market-tab {
+    @apply relative py-6 px-8 max-sm:px-3 border-l-4 border-l-transparent bg-[#f8f7f4] cursor-pointer 
+           transition-all duration-300 border-b border-[#e8e4da] last:border-b-0;
+  }
+
+  .market-panel.active {
+    @apply flex flex-col duration-500;
+    animation: testimonialFadeIn 0.5s ease-out forwards;
+  }
+
+  .market-tab:hover:not(.active) {
+    @apply bg-white/50 border-l-secondary-400/30;
+  }
+
+  .market-tab.active {
+    border-left-color: var(--color-secondary-400);
+    background: white;
+  }
+
+  .feature-box {
+    @apply p-5 bg-[#f8f7f4] border-l-2 border-l-secondary-400/30 transition-all duration-300
+           hover:bg-white hover:shadow-md hover:border-l-secondary-400;
+  }
+
+  .market-tab:hover {
+    border-left-color: var(--color-secondary-400);
+    background: white;
+  }
+
+  .market-tab-num {
+    @apply text-[11px] font-bold tracking-[2px] text-secondary-400 mb-1;
+  }
+
+  .market-tab-title {
+    @apply font-pro text-[15px] font-bold text-brand-700;
+  }
+
+  .market-panel {
+    @apply hidden;
+  }
+
+  .market-panel.active {
+    @apply block;
+  }
+
+  .sub-service {
+    @apply p-7 max-sm:p-3 border border-[#e8e4da] bg-white mb-4 transition-all border-l-4 border-l-transparent;
+  }
+
+  .sub-service:hover {
+    border-left-color: var(--gold);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .sub-service h4 {
+    @apply font-pro text-[17px] font-bold text-brand-700 mb-2;
+  }
+
+  .sub-service p {
+    @apply text-[13px] text-[#666] leading-[1.7];
+  }
+
+  .instrument-card {
+    @apply p-6 flex flex-col items-center text-center transition-all duration-500
+           bg-white/3 border border-white/10 hover:bg-white/8 
+           hover:border-secondary-400/50 hover:-translate-y-2;
+  }
+
+  .instrument-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    border-color: var(--color-secondary-400);
+  }
+
+  .instrument-card:hover .instrument-icon {
+    @apply bg-secondary-400 text-white border-secondary-400 scale-110 shadow-[0_0_15px_rgba(201,152,42,0.4)];
+  }
+
+  .instrument-icon {
+    @apply w-12 h-12 bg-secondary-400/10 text-secondary-400 flex items-center justify-center 
+           rounded-lg mb-4 transition-all duration-500 border border-secondary-400/20;
   }
 }
 

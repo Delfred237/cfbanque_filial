@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Services | Chartered Financial Investment</title>
+    <title>Global Capital Markets | Chartered Financial Investment</title>
 
     <meta
       name="description"
-      content="Explore CHARTERED's full suite of financial services: Strategic Financial Engineering, M&A Advisory, Capital Raising, Infrastructure Finance, ESG, and more."
+      content="CHARTERED provides ECM, DCM, Private Capital, Sovereign Advisory, and Structured Trade Finance services connecting African enterprises to global capital markets."
     />
     <meta name="robots" content="index, follow" />
 
@@ -418,53 +418,533 @@
       </div>
     </header>
 
-    <!-- ===== HEADER ===== -->
+    <!-- ===== MAIN ===== -->
     <main>
       <!-- PAGE HERO -->
-      <section class="page-hero-services">
+      <section class="page-hero-markets">
         <div class="page-hero-content">
           <div class="breadcrumb">
-            <a href="./index.html">Home</a><span>/</span
-            ><span class="text-white/70">Services</span>
+            <a href="index.html">Home</a><span>/</span
+            ><span class="text-white/70">Global Capital Markets</span>
           </div>
           <p
             class="text-[12px] font-semibold tracking-[3px] uppercase text-secondary-400 mb-3.5"
           >
-            Strategic Financial Services
+            Global Capital Markets
           </p>
           <h1 class="subtitle">
-            A Complete Suite of<br />Financial Architecture Services
+            Connecting African Enterprises<br />to International Investors
           </h1>
-          <p class="text-base text-white/70 leading-[1.8] max-w-250 mb-9">
-            From strategic financial engineering to ESG structuring, CHARTERED
-            delivers integrated services designed to transform African
-            enterprises into globally credible financial actors.
-          </p>
-          <a href="./contact.html" class="btn-primary"
-            >Schedule a Consultation</a
+          <p
+            class="text-base text-[rgba(255,255,255,0.7)] leading-[1.8] max-w-250 mb-9"
           >
+            CHARTERED provides comprehensive advisory services for ECM and DCM
+            transactions, sovereign debt advisory, private capital placements,
+            and structured trade finance — bridging African ambition with global
+            capital.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="./contact.html" class="btn-primary">Request Advisory</a>
+            <a href="#ecm" class="btn-outline">Explore Our Capabilities</a>
+          </div>
         </div>
       </section>
 
-      <!-- OVERVIEW GRID -->
-      <section class="py-20 bg-[#f8f7f4] reveal">
-        <div class="max-w-7xl mx-auto px-6">
+      <!-- MARKET SEGMENTS -->
+      <section class="py-25 bg-white reveal">
+        <div class="max-w-7xl mx-auto px-6 max-sm:px-4">
           <div class="text-center mb-14 animate-on-scroll">
-            <p class="section-tag">All Services</p>
-            <h2 class="section-title">What We Do</h2>
+            <p class="section-tag">Market Access</p>
+            <h2 class="section-title">Our Capital Market Capabilities</h2>
             <div class="divider-gold my-5 mx-auto"></div>
             <p class="text-[#888] text-sm max-w-145 mx-auto leading-[1.8]">
-              Each service is designed as part of an integrated financial
-              architecture framework, combining local market intelligence with
-              international capital market expertise.
+              The progressive integration of African economies into global
+              financial systems creates significant opportunities for
+              corporations to access international capital markets. CHARTERED
+              positions itself at the heart of this transformation.
+            </p>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-3 gap-0 border border-[#e8e4da] shadow-xl"
+          >
+            <!-- Tabs -->
+            <div class="markets-tabs bg-[#f8f7f4]">
+              <div class="market-tab active" onclick="showMarket('ecm', this)">
+                <div class="market-tab-num">01</div>
+                <div class="market-tab-title">Equity Capital Markets (ECM)</div>
+              </div>
+              <div class="market-tab" onclick="showMarket('dcm', this)">
+                <div class="market-tab-num">02</div>
+                <div class="market-tab-title">Debt Capital Markets (DCM)</div>
+              </div>
+              <div class="market-tab" onclick="showMarket('sovereign', this)">
+                <div class="market-tab-num">03</div>
+                <div class="market-tab-title">Sovereign & Public Advisory</div>
+              </div>
+              <div class="market-tab" onclick="showMarket('private', this)">
+                <div class="market-tab-num">04</div>
+                <div class="market-tab-title">Private Capital</div>
+              </div>
+              <div class="market-tab" onclick="showMarket('trade', this)">
+                <div class="market-tab-num">05</div>
+                <div class="market-tab-title">Structured Trade Finance</div>
+              </div>
+              <div class="market-tab" onclick="showMarket('corporate', this)">
+                <div class="market-tab-num">06</div>
+                <div class="market-tab-title">Corporate Transformation</div>
+              </div>
+            </div>
+
+            <!-- Panels -->
+            <div
+              class="lg:col-span-2 p-10 max-sm:p-4 bg-white border-l border-gray-100"
+              data-stagger=".feature-box"
+            >
+              <div class="market-panel active animate-on-scroll" id="panel-ecm">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  EQUITY CAPITAL MARKETS
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  International ECM Advisory
+                </h3>
+                <div class="w-12 h-0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  CHARTERED provides comprehensive advisory services for Equity
+                  Capital Markets transactions, enabling African enterprises to
+                  diversify their financing sources and strengthen their capital
+                  base. Our interventions include strategic preparation for
+                  initial public offerings (IPOs), secondary share placements,
+                  and cross-border listings on international exchanges.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      IPO Advisory
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Full preparation, prospectus structuring, investor
+                      roadshows, and exchange listing coordination.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Secondary Placements
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Accelerated bookbuilds, block trades, and strategic equity
+                      placements with institutional investors.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Cross-Border Listings
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Dual-listings and cross-border exchanges on London, Paris,
+                      New York, and Pan-African exchanges.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Pre-IPO Structuring
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Corporate reorganization, financial reporting transition,
+                      and governance framework ahead of listing.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request ECM Advisory</a
+                >
+              </div>
+
+              <div class="market-panel animate-on-scroll" id="panel-dcm">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  DEBT CAPITAL MARKETS
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  International DCM Advisory
+                </h3>
+                <div class="w-12 h-0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  On the debt side, CHARTERED structures and arranges corporate
+                  bond issuances, Eurobonds, structured notes, and medium-term
+                  note programs. Our DCM team has deep expertise in pricing,
+                  documentation, and distribution to international fixed-income
+                  investors.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Eurobond Issuances
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      International bond structuring, documentation, and
+                      placement with global fixed-income investors.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Corporate Bond Programs
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Medium-Term Note (MTN) programs and domestic bond
+                      issuances on regional exchanges.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Structured Notes
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Complex structured debt instruments combining fixed-income
+                      with derivative components.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Green Bonds
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      ESG-aligned debt instruments targeting international
+                      sustainable finance investors.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request DCM Advisory</a
+                >
+              </div>
+
+              <div class="market-panel animate-on-scroll" id="panel-sovereign">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  GOVERNMENT & SOVEREIGN
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  Sovereign & Public Sector Advisory
+                </h3>
+                <div class="w-12 h-.0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  Public sector institutions play a decisive role in the
+                  economic transformation of African economies. CHARTERED
+                  provides strategic advisory services to governments, sovereign
+                  entities, and public agencies in the structuring and financing
+                  of national development programs.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Sovereign Debt Advisory
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Debt portfolio optimization, refinancing strategies, and
+                      liability management for sovereign entities.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Public Infrastructure Financing
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      National development program financing strategies
+                      including blended finance and multilateral coordination.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Sovereign Wealth Funds
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Design, structuring, and governance of sovereign wealth
+                      and national development funds.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Public Agency Advisory
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Strategic advisory to state-owned enterprises and public
+                      agencies on capital structure and financing.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request Advisory</a
+                >
+              </div>
+
+              <div class="market-panel animate-on-scroll" id="panel-private">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  PRIVATE CAPITAL
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  Private Equity & Strategic Investment Advisory
+                </h3>
+                <div class="w-12 h-0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  Private equity represents a critical driver of growth capital
+                  for African enterprises. CHARTERED acts as a strategic advisor
+                  in the structuring and negotiation of private equity
+                  transactions involving international investment funds,
+                  sovereign wealth funds, family offices, and institutional
+                  investors.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      PE Transaction Advisory
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Buy-side and sell-side advisory for private equity
+                      transactions across African markets.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Fund Structuring
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Design of private equity fund vehicles, LP/GP structures,
+                      and investment mandates.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Family Office Advisory
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Wealth structuring, portfolio diversification, and direct
+                      investment advisory for family offices.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-bold text-[13px] text-brand-700 mb-1">
+                      Co-Investment Structures
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Design of co-investment frameworks enabling institutional
+                      investors to participate alongside PE funds.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request Advisory</a
+                >
+              </div>
+
+              <div class="market-panel animate-on-scroll" id="panel-trade">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  STRUCTURED TRADE FINANCE
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  Trade & Commodity Finance
+                </h3>
+                <div class="w-12 h-0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  Trade finance remains a fundamental component of Africa's
+                  integration into global commerce. CHARTERED structures
+                  sophisticated trade financing solutions designed to support
+                  export-oriented industries, commodity trading companies, and
+                  large-scale supply chains operating across the continent and
+                  internationally.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Commodity Finance
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Financing solutions for commodity exporters across
+                      agriculture, mining, and energy sectors.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Supply Chain Finance
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Structured solutions optimizing working capital and cash
+                      flow across international supply chains.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Export Credit Facilities
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Coordination with export credit agencies and multilateral
+                      institutions for African exporters.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Trade Risk Mitigation
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Hedging strategies, credit guarantees, and risk allocation
+                      structures for cross-border trade.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request Advisory</a
+                >
+              </div>
+
+              <div class="market-panel animate-on-scroll" id="panel-corporate">
+                <p
+                  class="text-[11px] font-bold tracking-[3px] text-secondary-400 mb-3"
+                >
+                  CORPORATE TRANSFORMATION
+                </p>
+                <h3 class="font-pro text-[26px] font-bold text-brand-700 mb-4">
+                  Corporate Strategy & Financial Transformation
+                </h3>
+                <div class="w-12 h-0.75 bg-secondary-400 mb-5"></div>
+                <p class="text-sm text-[#555] leading-[1.85] mb-5">
+                  Beyond traditional financing activities, CHARTERED assists
+                  corporate leadership teams in defining long-term financial
+                  strategies and institutional transformation programs. This
+                  includes advisory on family business institutionalization,
+                  strategic joint ventures, and international partnership
+                  structuring.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Long-Term Financial Strategy
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Strategic financial planning aligned with corporate growth
+                      ambitions and capital market positioning.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      Family Business Structuring
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Institutionalization of family-owned businesses for
+                      generational transition and institutional capital
+                      attraction.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4 class="font-semibold text-[13px] text-brand-700 mb-1">
+                      International Joint Ventures
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Structuring cross-border strategic alliances with global
+                      industrial and financial partners.
+                    </p>
+                  </div>
+                  <div
+                    class="p-4 bg-[#f8f7f4] border-l-3 border-l-secondary-400"
+                  >
+                    <h4
+                      class="font-semibold text-[13px] text-brand-700 mb-1"
+                      margin-bottom:
+                      4px;
+                    >
+                      Institutional Transformation
+                    </h4>
+                    <p class="text-[12px] text-[#888] leading-[1.6]">
+                      Comprehensive transformation programs aligning operations,
+                      governance, and reporting with global standards.
+                    </p>
+                  </div>
+                </div>
+                <a href="./contact.html" class="btn-primary mt-7 inline-block"
+                  >Request Advisory</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINANCIAL INSTRUMENTS -->
+      <section class="py-25 bg-brand-800 reveal">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-14 animate-on-scroll">
+            <p class="section-tag">Instruments & Structures</p>
+            <h2 class="section-title text-white">
+              Key Financial Instruments We Structure
+            </h2>
+            <div class="divider-gold my-5 mx-auto"></div>
+            <p class="text-white/55 text-sm max-w-145 mx-auto leading-[1.8]">
+              Our team structures and arranges a broad range of financial
+              instruments to match the specific financing needs of each client
+              and the requirements of international investors.
             </p>
           </div>
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-            data-stagger=".service-card-sm"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4"
+            data-stagger=".instrument-card"
           >
-            <a href="#sfe" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
+            >
+              <div class="instrument-icon">
                 <svg
                   class="w-5 h-5"
                   fill="none"
@@ -475,20 +955,19 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
-                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
                   />
                 </svg>
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Strategic Financial Engineering
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                Capital structure optimization, debt/equity structuring, and
-                financial risk modeling.
-              </p>
-            </a>
-            <a href="#cra" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
+              <div class="text-[13px] font-semibold text-white mb-1">
+                Eurobonds
+              </div>
+              <div class="text-[11px] text-white/4">International Debt</div>
+            </div>
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
+            >
+              <div class="instrument-icon">
                 <svg
                   class="w-5 h-5"
                   fill="none"
@@ -499,20 +978,17 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
-                    d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"
+                    d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"
                   />
                 </svg>
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Capital Raising & Markets
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                Equity fundraising, private placements, and international
-                structured financing.
-              </p>
-            </a>
-            <a href="#manda" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
+              <div class="text-[13px] font-semibold text-white mb-1">IPOs</div>
+              <div class="text-[11px] text-white/40">Equity Markets</div>
+            </div>
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
+            >
+              <div class="instrument-icon">
                 <svg
                   class="w-5 h-5"
                   fill="none"
@@ -523,92 +999,19 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
-                    d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                    d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Mergers & Acquisitions
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                M&A advisory, corporate valuations, due diligence, and
-                transaction structuring.
-              </p>
-            </a>
-            <a href="#isg" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
+              <div class="text-[13px] font-semibold text-white mb-1">
+                Syndicated Loans
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Institutional Structuring
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                International holding companies, investment vehicles, and
-                governance frameworks.
-              </p>
-            </a>
-            <a href="#ipf" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Infrastructure & Project Finance
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                PPP advisory, energy, transport, and digital infrastructure
-                financing.
-              </p>
-            </a>
-            <a href="#fro" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
-                <svg
-                  class="w-5 h-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="1.5"
-                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                  />
-                </svg>
-              </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Financial Restructuring
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                Debt restructuring, capital optimization, and recovery plans for
-                financial stability.
-              </p>
-            </a>
-            <a href="#esg" class="service-card-sm animate-on-scroll">
-              <div class="service-icon">
+              <div class="text-[11px] text-white/40">Bank Finance</div>
+            </div>
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
+            >
+              <div class="instrument-icon">
                 <svg
                   class="w-5 h-5"
                   fill="none"
@@ -623,20 +1026,15 @@
                   />
                 </svg>
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                ESG & Sustainable Finance
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                Green bonds, ESG strategy, and sustainable finance instruments
-                for impact investors.
-              </p>
-            </a>
-            <a
-              href="#gov"
-              class="service-card-sm animate-on-scroll"
-              data-delay="320"
+              <div class="text-[13px] font-semibold text-white mb-1">
+                Green Bonds
+              </div>
+              <div class="text-[11px] text-white/40">Sustainable Finance</div>
+            </div>
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
             >
-              <div class="service-icon">
+              <div class="instrument-icon">
                 <svg
                   class="w-5 h-5"
                   fill="none"
@@ -647,486 +1045,66 @@
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="1.5"
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                    d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
                   />
                 </svg>
               </div>
-              <h3 class="font-pro text-base font-bold text-brand-700 mb-2">
-                Governance & Compliance
-              </h3>
-              <p class="text-[13px] text-[#888] leading-[1.6]">
-                Board structuring, audit frameworks, and international
-                regulatory compliance.
-              </p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 1: STRATEGIC FINANCIAL ENGINEERING -->
-      <section class="service-block reveal" id="sfe">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="service-img-wrapper animate-on-scroll">
-              <img
-                src="./assets/images/strategic_financial.webp"
-                alt="Strategic Financial Engineering"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=Financial+Engineering'
-                "
-              />
-              <div class="service-img-accent"></div>
+              <div class="text-[13px] font-semibold text-white mb-1">
+                Mezzanine Debt
+              </div>
+              <div class="text-[11px] text-white/40">Hybrid Instruments</div>
             </div>
-            <div class="relative animate-on-scroll" data-delay="200">
-              <div class="service-number">01</div>
-              <span class="service-tag">Core Service</span>
-              <h2 class="section-title mb-4">
-                Strategic Financial Engineering
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Financial engineering constitutes the technical core of our
-                intervention. It is based on an in-depth analysis of balance
-                sheets, cash flow structures, sectoral outlooks, and
-                macroeconomic risks. Each transaction is designed through
-                rigorous financial modeling incorporating cost of capital
-                parameters, debt sustainability metrics, regulatory constraints,
-                and long-term strategic objectives.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Our approach aims to optimize capital structure in order to
-                reduce the weighted average cost of capital (WACC), strengthen
-                solvency, and enhance future access to financial markets.
-              </p>
-              <ul class="service-list mb-7">
-                <li>Capital Structure Optimization (WACC Reduction)</li>
-                <li>Senior & Mezzanine Debt Structuring</li>
-                <li>International Bank Syndications</li>
-                <li>Regional & International Bond Issuances</li>
-                <li>Hybrid Debt-Equity Instruments</li>
-                <li>Financial Risk Modeling & Stress Testing</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
+            <div
+              class="instrument-card animate-on-scroll bg-white/4 border border-white/8"
+            >
+              <div class="instrument-icon">
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  />
+                </svg>
+              </div>
+              <div class="text-[13px] font-semibold text-white mb-1">
+                Project Bonds
+              </div>
+              <div class="text-[11px] text-white/40">Infrastructure</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- SERVICE 2: CAPITAL RAISING -->
-      <section class="service-block reveal" id="cra">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative animate-on-scroll">
-              <div class="service-number">02</div>
-              <span class="service-tag">High Priority</span>
-              <h2 class="section-title mb-4">
-                Capital Raising & Access to International Markets
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Access to capital remains a structural challenge for African
-                enterprises. CHARTERED structures and organizes equity
-                fundraising, international private placements, private equity
-                transactions, and structured financing solutions. Each operation
-                is supported by rigorous institutional documentation, including
-                comprehensive Investment Memoranda and forward-looking financial
-                modeling.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                We serve as a strategic interface between African companies and
-                global investors, ensuring financial communication consistent
-                with international standards and positioning companies within a
-                sustainable, recurring financing trajectory.
-              </p>
-              <ul class="service-list mb-7">
-                <li>International Private Placements</li>
-                <li>Equity Capital Raising</li>
-                <li>Investment Memoranda Preparation</li>
-                <li>Private Equity Transaction Advisory</li>
-                <li>Cross-Border Capital Markets Access</li>
-                <li>Global Institutional Investor Relations</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-            <div class="service-img-wrapper animate-on-scroll" data-delay="200">
-              <img
-                src="./assets/images/capital_raising.webp"
-                alt="Capital Raising"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=Capital+Raising'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 3: M&A -->
-      <section class="service-block reveal" id="manda">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="service-img-wrapper animate-on-scroll">
-              <img
-                src="./assets/images/merge_acquisition.webp"
-                alt="Mergers & Acquisitions"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/102448/c9982a?text=M%26A+Advisory'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-            <div class="relative animate-on-scroll" data-delay="200">
-              <div class="service-number">03</div>
-              <span class="service-tag">Strategic Advisory</span>
-              <h2 class="section-title mb-4">
-                Mergers, Acquisitions & Strategic Transactions
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                In an economic environment increasingly marked by sectoral
-                consolidation, CHARTERED advises African enterprises in external
-                growth operations, restructuring initiatives, and asset
-                disposals. Mergers and acquisitions are conceived as instruments
-                of strategic transformation enabling vertical integration,
-                regional expansion, sectoral diversification, and enhanced
-                competitiveness.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                CHARTERED acts as an independent advisor, ensuring financial
-                coherence, transactional transparency, and the protection of our
-                clients' strategic interests throughout each engagement.
-              </p>
-              <ul class="service-list mb-7">
-                <li>Corporate Valuation (DCF, Multiples, Sum-of-Parts)</li>
-                <li>Strategic Synergy Analysis</li>
-                <li>Financial Due Diligence</li>
-                <li>Transaction Structuring & Negotiation</li>
-                <li>Post-Merger Integration Advisory</li>
-                <li>Strategic Divestitures & Asset Disposals</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 4: INSTITUTIONAL STRUCTURING -->
-      <section class="service-block reveal" id="isg">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative animate-on-scroll">
-              <div class="service-number">04</div>
-              <span class="service-tag">Foundation Service</span>
-              <h2 class="section-title mb-4">
-                Structuring of Holdings & International Investment Vehicles
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Institutional structuring represents a major strategic lever for
-                African groups undergoing expansion. CHARTERED supports the
-                creation of international holding companies, specialized
-                investment vehicles, and regional structures designed to
-                optimize governance, taxation, and risk management.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                We assess relevant jurisdictions, international tax treaties,
-                compliance obligations, and banking regulations to design
-                coherent and sustainable financial architectures that enhance
-                investor attractiveness and facilitate cross-border fundraising.
-              </p>
-              <ul class="service-list mb-7">
-                <li>International Holding Company Creation</li>
-                <li>Specialized Investment Vehicle Structuring</li>
-                <li>Jurisdiction & Tax Treaty Assessment</li>
-                <li>Corporate Governance Framework Design</li>
-                <li>Board & Committee Structuring</li>
-                <li>Cross-Border Regulatory Compliance</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-            <div class="service-img-wrapper animate-on-scroll" data-delay="200">
-              <img
-                src="./assets/images/institutional_structuring.webp"
-                alt="Institutional Structuring"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0d1e38/c9982a?text=Institutional+Structuring'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 5: INFRASTRUCTURE & PROJECT FINANCE -->
-      <section class="service-block reveal" id="ipf">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="service-img-wrapper animate-on-scroll">
-              <img
-                src="./assets/images/infrastructure.webp"
-                alt="Infrastructure Finance"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=Infrastructure+Finance'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-            <div class="relative animate-on-scroll" data-delay="200">
-              <div class="service-number">05</div>
-              <span class="service-tag">Sector-Specific</span>
-              <h2 class="section-title mb-4">
-                Infrastructure & Project Finance
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Africa presents substantial infrastructure development needs.
-                CHARTERED structures project financing solutions in sectors such
-                as energy, transportation, telecommunications, industrial
-                agriculture, and natural resources. Project finance is based on
-                the analysis of future cash flows generated by the financed
-                asset.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                We design structures incorporating public-private partnerships,
-                multilateral guarantees, and international syndications. The
-                objective is to ensure financial viability while efficiently
-                allocating risks among all stakeholders involved.
-              </p>
-              <ul class="service-list mb-7">
-                <li>Energy & Power Infrastructure Financing</li>
-                <li>Transport Corridor & Logistics Finance</li>
-                <li>Public-Private Partnership (PPP) Advisory</li>
-                <li>Multilateral Development Bank Coordination</li>
-                <li>Blended Finance Structures</li>
-                <li>Long-Term Project Debt Structuring</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 6: ESG -->
-      <section class="service-block reveal" id="esg">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative animate-on-scroll">
-              <div class="service-number">06</div>
-              <span class="service-tag">Emerging Priority</span>
-              <h2 class="section-title mb-4">
-                Sustainable Finance & ESG Strategy
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Environmental, Social, and Governance (ESG) criteria have become
-                a decisive determinant of access to international capital.
-                CHARTERED supports enterprises in developing ESG strategies,
-                issuing green financial instruments, and integrating
-                non-financial reporting standards aligned with international
-                investor requirements.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                This orientation expands the potential investor base, enhances
-                institutional reputation, and aligns African enterprises with
-                responsible and sustainable global development dynamics —
-                significantly widening access to international capital markets.
-              </p>
-              <ul class="service-list mb-7">
-                <li>ESG Strategy Development & Integration</li>
-                <li>Green Bond Structuring & Issuance</li>
-                <li>Climate Finance Mechanisms</li>
-                <li>Non-Financial Reporting Frameworks (GRI, TCFD)</li>
-                <li>Sustainable Infrastructure Investment Advisory</li>
-                <li>Impact Investor Relations</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-            <div class="service-img-wrapper animate-on-scroll" data-delay="200">
-              <img
-                src="./assets/images/substainable.jpg"
-                alt="ESG Finance"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=ESG+Sustainable+Finance'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 7: FINANCIAL RESTRUCTURING -->
-      <section class="service-block reveal" id="fro">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="service-img-wrapper animate-on-scroll">
-              <img
-                src="./assets/images/esg_strategy.jpg"
-                alt="Financial Restructuring"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=Restructuring'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-            <div class="relative animate-on-scroll" data-delay="200">
-              <div class="service-number">07</div>
-              <span class="service-tag">Crisis Management</span>
-              <h2 class="section-title" style="margin-bottom: 16px">
-                Financial Restructuring & Capital Optimization
-              </h2>
-              <div class="divider-gold"></div>
-              <p
-                style="
-                  color: #555;
-                  font-size: 14px;
-                  line-height: 1.85;
-                  margin-bottom: 20px;
-                "
-              >
-                In volatile economic contexts, CHARTERED intervenes to
-                restructure debt, renegotiate financial obligations, and
-                optimize capital structures. Our approach is grounded in a
-                comprehensive analysis of financial performance and sectoral
-                outlooks, looking beyond short-term stabilization toward
-                long-term institutional consolidation.
-              </p>
-              <p
-                style="
-                  color: #555;
-                  font-size: 14px;
-                  line-height: 1.85;
-                  margin-bottom: 24px;
-                "
-              >
-                We design recovery and stabilization plans aimed at restoring
-                financial stability, improving liquidity, and strengthening
-                stakeholder confidence. Restructuring is approached as a
-                strategic phase toward renewed institutional credibility.
-              </p>
-              <ul class="service-list" style="margin-bottom: 28px">
-                <li>Debt Restructuring & Renegotiation</li>
-                <li>Balance Sheet Optimization</li>
-                <li>Liquidity Recovery Planning</li>
-                <li>Creditor Negotiation & Mediation</li>
-                <li>Financial Performance Turnaround</li>
-                <li>Long-Term Capital Strategy Redefinition</li>
-              </ul>
-              <a href="contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICE 8: GOVERNANCE & COMPLIANCE -->
-      <section class="service-block reveal" id="gov">
-        <div class="max-w-7xl mx-auto px-6">
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div class="relative animate-on-scroll">
-              <div class="service-number">08</div>
-              <span class="service-tag">Compliance</span>
-              <h2 class="section-title mb-4">
-                Governance & International Compliance
-              </h2>
-              <div class="divider-gold"></div>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                Integration into global markets requires a high standard of
-                governance and regulatory compliance. CHARTERED supports
-                enterprises in establishing structured boards of directors,
-                specialized committees (audit, risk, compliance), and internal
-                control systems aligned with international best practices.
-              </p>
-              <p class="text-[#555] text-sm leading-[1.85] mb-5">
-                We assist in the transition toward international accounting
-                standards and in enhancing financial transparency. Governance is
-                not merely a regulatory requirement — it is a decisive factor in
-                valuation enhancement, institutional credibility, and long-term
-                sustainability.
-              </p>
-              <ul class="service-list mb-7">
-                <li>Board of Directors Structuring</li>
-                <li>Audit, Risk & Compliance Committees</li>
-                <li>IFRS & US GAAP Transition Support</li>
-                <li>Internal Control System Design</li>
-                <li>Financial Transparency Enhancement</li>
-                <li>Institutional Credibility Assessment</li>
-              </ul>
-              <a href="./contact.html" class="btn-primary"
-                >Request This Service</a
-              >
-            </div>
-            <div class="service-img-wrapper animate-on-scroll" data-delay="200">
-              <img
-                src="./assets/images/client_first.webp"
-                alt="Governance"
-                onerror="
-                  this.src =
-                    'https://placehold.co/600x400/0a1628/c9982a?text=Governance+Compliance'
-                "
-              />
-              <div class="service-img-accent"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA BANNER -->
+      <!-- CTA -->
       <section class="cta-banner reveal">
-        <div
-          class="max-w-7xl mx-auto px-6 relative z-1 text-center animate-on-scoll"
-        >
-          <p class="section-tag">Next Step</p>
+        <div class="max-w-7xl mx-auto px-6 relative z-1 text-center">
+          <p class="section-tag">Begin Your Capital Market Journey</p>
           <h2 class="cta-subtitle">
-            Let's Design Your Financial Architecture Together
+            Ready to Access International Capital Markets?
           </h2>
           <p
-            class="text-[15px] text-[#666] max-w-125 mt-0 mx-auto mb-9 leading-[1.8]"
+            class="text-[15px] text-[#666] max-w-140 mt-0 mx-auto mb-9 leading-[1.8]"
           >
-            Each engagement begins with a strategic diagnostic. Our team will
-            work with you to identify the optimal financial structure for your
-            ambitions and market positioning.
+            Our capital markets team will assess your company's readiness,
+            design the optimal transaction structure, and connect you with the
+            right institutional investors.
           </p>
           <div class="flex flex-wrap gap-4 justify-center">
             <a href="./contact.html" class="btn-primary"
-              >Request a Free Consultation</a
+              >Request a Free Assessment</a
             >
-            <a href="./capital-markets.html" class="btn-outline-black"
-              >Explore Capital Markets</a
+            <a href="./research.html" class="btn-outline-black"
+              >Read Our Market Research</a
             >
           </div>
         </div>
       </section>
-
-      <!-- Back to top -->
-      <a
-        href="#"
-        id="backToTop"
-        class="hidden fixed bottom-7.5 right-7.5 w-11 h-11 bg-secondary-400 text-white items-center justify-center text-[18px] z-9999 transition-all duration-300 hover:bg-secondary-700 hover:scale-105"
-        >↑</a
-      >
     </main>
 
     <!-- ===== FOOTER ===== -->

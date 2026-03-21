@@ -297,4 +297,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  /* ─── 9. MARKET TABS ─── */
+  window.showMarket = function (id, el) {
+    document
+      .querySelectorAll(".market-tab")
+      .forEach((t) => t.classList.remove("active"));
+    document
+      .querySelectorAll(".market-panel")
+      .forEach((p) => p.classList.remove("active"));
+    el.classList.add("active");
+    document.getElementById("panel-" + id).classList.add("active");
+  };
 });

@@ -870,6 +870,59 @@
     animation: slideInForm 0.5s ease-out forwards;
   }
 
+  .form-label {
+    @apply block text-[12px] font-semibold tracking-[1px] uppercase text-[#555] mb-2;
+  }
+
+  .form-input {
+    @apply w-full py-3.5 px-4.5 border-[1.5px] border-[#e0ddd5] bg-white text-sm text-[#1a1a1a] outline-none transition-all duration-300;
+  }
+
+  .form-input:focus {
+    @apply border-secondary-400;
+  }
+
+  .form-select {
+    @apply w-full py-3.5 px-4.5 border-[1.5px] border-[#e0ddd5] bg-white text-sm text-[#1a1a1a] outline-none transition-all duration-300;
+  }
+
+  .form-select:focus {
+    @apply border-secondary-400;
+  }
+
+  .form-textarea {
+    @apply w-full py-3.5 px-4.5 min-h-30 border-[1.5px] border-[#e0ddd5] bg-white text-sm text-[#1a1a1a] outline-none transition-all duration-300;
+    resize: vertical;
+  }
+
+  .form-textarea:focus {
+    @apply border-secondary-400;
+  }
+
+  .step-dot {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-[13px] font-bold transition-all duration-300;
+  }
+
+  .step-dot.done {
+    @apply bg-secondary-400 text-white;
+  }
+
+  .step-dot.current {
+    @apply bg-brand-700 text-white;
+  }
+
+  .step-dot.upcoming {
+    @apply bg-[#e8e4da] text-[#999];
+  }
+
+  .step-line {
+    @apply flex-1 h-0.5 bg-[#e8e4da] transition-all duration-300;
+  }
+
+  .step-line.done {
+    @apply bg-secondary-400;
+  }
+
   .step-indicators {
     @apply flex gap-0 mb-8 bg-amber-300;
   }
@@ -898,7 +951,8 @@
   /* ====================== ABOUT PAGE STYLE ====================== */
   .page-hero-about,
   .page-hero-services,
-  .page-hero-markets {
+  .page-hero-markets,
+  .page-hero-contact {
     @apply bg-brand-800 pt-30 pb-20 relative overflow-hidden;
   }
 
@@ -930,9 +984,19 @@
     animation: ken-burns 10s ease-out infinite forwards;
   }
 
+  .page-hero-contact::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/contact_page.jpg") center/cover no-repeat;
+    transform: scale(1);
+    animation: ken-burns 10s ease-out infinite forwards;
+  }
+
   .page-hero-about::after,
   .page-hero-services::after,
-  .page-hero-markets::after {
+  .page-hero-markets::after,
+  .page-hero-contact::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1263,6 +1327,31 @@
   .instrument-icon {
     @apply w-12 h-12 bg-secondary-400/10 text-secondary-400 flex items-center justify-center 
            rounded-lg mb-4 transition-all duration-500 border border-secondary-400/20;
+  }
+
+  /* ====================== MARKETS PAGE STYLE ====================== */
+  .service-option {
+    @apply border-[1.5px] border-[#e0ddd5] py-4.5 px-5 flex items-center gap-3.5 cursor-pointer transition-all duration-250;
+  }
+
+  .service-option:hover {
+    @apply border-secondary-400 bg-secondary-400/5;
+  }
+
+  .service-option.selected {
+    @apply border-secondary-400 bg-secondary-400/7;
+  }
+
+  .service-option input[type="checkbox"] {
+    @apply w-4.5 h-4.5 accent-secondary-400 shrink;
+  }
+
+  .info-card {
+    @apply flex items-start gap-4 p-6 bg-white/4 border border-white/8 mb-3;
+  }
+
+  .info-icon {
+    @apply w-11 h-11 bg-secondary-400/5 border border-secondary/5 flex items-center justify-center text-secondary-400 shrink-0;
   }
 }
 

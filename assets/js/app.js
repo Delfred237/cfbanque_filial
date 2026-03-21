@@ -309,4 +309,48 @@ document.addEventListener("DOMContentLoaded", () => {
     el.classList.add("active");
     document.getElementById("panel-" + id).classList.add("active");
   };
+
+  /* ─── 10. CONTACT FORM ─── */
+  let currentStep = 1;
+
+  window.goToStep = function (step) {
+    document.getElementById("step-" + currentStep).classList.remove("active");
+    document.getElementById("step-" + step).classList.add("active");
+    // Update dots
+    for (let i = 1; i <= 3; i++) {
+      const dot = document.getElementById("dot-" + i);
+      if (i < step) {
+        dot.className = "step-dot done";
+        dot.innerHTML = "✓";
+      } else if (i === step) {
+        dot.className = "step-dot current";
+        dot.innerHTML = i;
+      } else {
+        dot.className = "step-dot upcoming";
+        dot.innerHTML = i;
+      }
+    }
+    // Update lines
+    for (let i = 1; i <= 2; i++) {
+      const line = document.getElementById("line-" + i);
+      line.className = i < step ? "step-line done" : "step-line";
+    }
+    currentStep = step;
+    window.scrollTo({
+      top: document.querySelector(".lg\\:col-span-2").offsetTop - 120,
+      behavior: "smooth",
+    });
+  };
+
+  window.submitForm = function () {
+    document.getElementById("step-3").classList.remove("active");
+    document.getElementById("step-success").classList.add("active");
+    for (let i = 1; i <= 3; i++) {
+      const dot = document.getElementById("dot-" + i);
+      dot.className = "step-dot done";
+      dot.innerHTML = "✓";
+    }
+    for (let i = 1; i <= 2; i++)
+      document.getElementById("line-" + i).className = "step-line done";
+  };
 });

@@ -953,7 +953,8 @@
   .page-hero-services,
   .page-hero-markets,
   .page-hero-contact,
-  .page-hero-research {
+  .page-hero-research,
+  .page-hero-africa {
     @apply bg-brand-800 pt-30 pb-20 relative overflow-hidden;
   }
 
@@ -1004,11 +1005,21 @@
     animation: ken-burns 10s ease-out infinite forwards;
   }
 
+  .page-hero-africa::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/africa-strategy.jpg") center/cover no-repeat;
+    transform: scale(1);
+    animation: ken-burns 10s ease-out infinite forwards;
+  }
+
   .page-hero-about::after,
   .page-hero-services::after,
   .page-hero-markets::after,
   .page-hero-contact::after,
-  .page-hero-research::after {
+  .page-hero-research::after,
+  .page-hero-africa::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1454,6 +1465,61 @@
 
   .method-num {
     @apply w-8 h-8 bg-secondary-400 text-white flex items-center justify-center text-[11px] font-bold shrink-0;
+  }
+
+  /* ====================== AFRICA PAGE STYLE ====================== */
+  .pillar-card {
+    @apply py-10 px-8 border border-[#e8e4da] bg-white relative overflow-hidden transition-all duration-300;
+  }
+
+  .pillar-card::after {
+    content: "";
+    @apply absolute bottom-0 left-0 right-0 h-1 bg-secondary-400 scale-x-0 transition-transform duration-350;
+  }
+
+  .pillar-card:hover {
+    @apply shadow-[0_12px_40px_rgba(0,0,0,0.09)] -translate-y-1;
+  }
+
+  .pillar-card:hover::after {
+    transform: scaleX(1);
+  }
+
+  .pillar-icon {
+    @apply w-14 h-14 bg-secondary-400/5 border border-secondary-400/20 flex items-center justify-center text-secondary-400 mb-6
+          transition-all duration-500;
+  }
+
+  .region-card {
+    @apply p-7 bg-secondary-400/5 border border-secondary-400/20 overflow-hidden transition-all duration-300;
+  }
+
+  .region-card:hover {
+    @apply bg-secondary-400/10 border-secondary-400/20;
+  }
+
+  .region-name {
+    @apply font-pro text-[18px] font-bold  text-white mb-2;
+  }
+
+  .region-markets {
+    @apply text-[12px] text-secondary-400 font-semibold tracking-[1px] uppercase mb-3;
+  }
+
+  .region-desc {
+    @apply text-[13px] text-white/55 leading-[1.7];
+  }
+
+  .transform-step {
+    @apply flex gap-5 p-7 bg-white border border-[#e8e4da] mb-4 transition-all duration-300;
+  }
+
+  .transform-step:hover {
+    @apply shadow-[0_0_0_0.07] border border-secondary-400;
+  }
+
+  .transform-step-num {
+    @apply w-12 h-12 bg-brand-800 text-secondary-400 flex items-center justify-center font-pro text-[18px] font-bold shrink-0;
   }
 }
 

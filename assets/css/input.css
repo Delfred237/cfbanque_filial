@@ -368,6 +368,10 @@
     @apply w-full h-full bg-cover bg-center scale-150 transition-transform duration-800 ease-out;
   }
 
+  .slide-bg-img {
+    @apply absolute inset-0 w-full h-full object-cover object-center;
+  }
+
   .slide.active .slide-bg {
     transform: scale(1);
     animation: ken-burns 10s ease-out forwards;

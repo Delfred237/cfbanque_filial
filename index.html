@@ -63,12 +63,18 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/images/slide2.webp"
+      fetchpriority="high"
+    />
 
-    <script
+    <!-- <script
       src="https://kit.fontawesome.com/def8d2ac0a.js"
       crossorigin="anonymous"
       defer
-    ></script>
+    ></script> -->
   </head>
   <body>
     <!-- ===== HEADER ===== -->
@@ -408,13 +414,20 @@
       <section class="hero" id="hero">
         <!-- Slide 1 -->
         <article class="slide active" id="slide-0">
-          <div
+          <!-- <div
             class="slide-bg"
             style="
               background-image: url(&quot;./assets/images/slide2.webp&quot;);
               background-color: #0a1628;
             "
-          ></div>
+          ></div> -->
+          <img
+            src="./assets/images/slide2.webp"
+            alt="Global Financial Architecture"
+            class="slide-bg-img"
+            fetchpriority="high"
+            loading="eager"
+          />
           <div class="slide-overlay"></div>
           <div class="slide-content">
             <div class="slide-tag">Global Financial Architecture</div>
@@ -1226,8 +1239,8 @@
               <div class="overflow-hidden rounded-lg group animate-on-scroll">
                 <img
                   src="./assets/images/statistic-we-help.webp"
-              loading="lazy"
-              decoding="async"
+                  loading="lazy"
+                  decoding="async"
                   alt="Chart"
                   class="max-w-full max-lg:w-full h-auto mb-8 object-cover transition-transform duration-1000 group-hover:scale-105"
                 />
@@ -1287,8 +1300,8 @@
                 <img
                   src="./assets/images/avatar3.webp"
                   alt="Heather"
-              loading="lazy"
-              decoding="async"
+                  loading="lazy"
+                  decoding="async"
                   class="testimonial-avatar"
                 />
                 <div>
@@ -1317,8 +1330,8 @@
                 <img
                   src="./assets/images/avatar2.webp"
                   alt="Client"
-              loading="lazy"
-              decoding="async"
+                  loading="lazy"
+                  decoding="async"
                   class="testimonial-avatar"
                 />
                 <div>
@@ -1347,8 +1360,8 @@
                 <img
                   src="./assets/images/avatar1.webp"
                   alt="Client"
-              loading="lazy"
-              decoding="async"
+                  loading="lazy"
+                  decoding="async"
                   class="testimonial-avatar"
                 />
                 <div>
@@ -1698,8 +1711,8 @@
                     class="w-full h-full object-cover"
                     src="./assets/images/logo.webp"
                     alt="Logo"
-              loading="lazy"
-              decoding="async"
+                    loading="lazy"
+                    decoding="async"
                 /></a>
               </div>
             </div>

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const REVEAL_CONFIG = {
     threshold: 0.15,
     rootMargin: "0px 0px -80px 0px",
-    staggerDelay: 150,
+    staggerDelay: 50,
   };
 
   /* ─── 2. GESTION NAVIGATION & SCROLL ─── */
@@ -378,4 +378,56 @@ document.addEventListener("DOMContentLoaded", () => {
       ? "Full Profile"
       : "Close Profile";
   };
+
+  const trailer = document.querySelector(".cursor-trailer");
+
+  window.addEventListener("mousemove", (e) => {
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+    // On montre le trailer dès le premier mouvement
+    if (trailer.style.opacity === "0") {
+      trailer.style.opacity = "1";
+    }
+
+    trailer.style.left = `${posX}px`;
+    trailer.style.top = `${posY}px`;
+  });
+
+  // Cache le trailer si la souris sort de la fenêtre
+  document.addEventListener("mouseleave", () => {
+    trailer.style.opacity = "0";
+  });
+
+  // Effet de scale au survol des liens/boutons
+  const interactiveElements = document.querySelectorAll(
+    "a, button, .slider-dot, .slider-arrow",
+  );
+
+  interactiveElements.forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+      document.body.classList.add("cursor-active");
+    });
+    el.addEventListener("mouseleave", () => {
+      document.body.classList.remove("cursor-active");
+    });
+  });
+
+  window.addEventListener("scroll", () => {
+    const scrollBar = document.getElementById("scrollBar");
+
+    // Calcul du pourcentage de scroll
+    // (Position actuelle / (Hauteur totale - Hauteur fenêtre)) * 100
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    const height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+
+    // Mise à jour de la largeur de la barre
+    if (scrollBar) {
+      scrollBar.style.width = scrolled + "%";
+    }
+  });
 });

@@ -954,7 +954,8 @@
   .page-hero-markets,
   .page-hero-contact,
   .page-hero-research,
-  .page-hero-africa {
+  .page-hero-africa,
+  .page-hero-leadership {
     @apply bg-brand-800 pt-30 pb-20 relative overflow-hidden;
   }
 
@@ -1014,12 +1015,23 @@
     animation: ken-burns 10s ease-out infinite forwards;
   }
 
+  .page-hero-leadership::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../images/leadership_landing_page.webp") center/cover
+      no-repeat;
+    transform: scale(1);
+    animation: ken-burns 10s ease-out infinite forwards;
+  }
+
   .page-hero-about::after,
   .page-hero-services::after,
   .page-hero-markets::after,
   .page-hero-contact::after,
   .page-hero-research::after,
-  .page-hero-africa::after {
+  .page-hero-africa::after,
+  .page-hero-leadership::after {
     content: "";
     position: absolute;
     inset: 0;
@@ -1521,6 +1533,264 @@
   .transform-step-num {
     @apply w-12 h-12 bg-brand-800 text-secondary-400 flex items-center justify-center font-pro text-[18px] font-bold shrink-0;
   }
+
+  /* ====================== LEADERSHIP PAGE STYLE ====================== */
+  .chairman-section {
+    @apply py-25 px-0 bg-white;
+  }
+
+  .chairman-img-wrap {
+    @apply relative;
+  }
+
+  .chairman-img-wrap img {
+    @apply w-full h-135 object-cover object-top block;
+  }
+
+  .chairman-img-accent {
+    @apply absolute top-7 -left-7 right-7 -bottom-7 border-2 border-secondary-400 z-0 pointer-events-none transition-all duration-1000 ease-out;
+    transform: translate(0, 0);
+  }
+
+  .is-visible .chairman-img-accent {
+    transform: translate(-1.75rem, -1.75rem);
+  }
+
+  .chairman-img-wrap > img {
+    @apply relative z-1;
+  }
+
+  .chairman-badge {
+    @apply absolute -bottom-0.5 -right-0.5 bg-secondary-400 text-white py-5 px-6 z-2 text-center shadow-[20px_20px_60px_rgba(0,0,0,0.1)] transition-all duration-1000 delay-500;
+  }
+
+  .chairman-badge-title {
+    @apply font-pro text-[13px] font-bold tracking-[0.5px] leading-[1.3];
+  }
+
+  .chairman-badge-sub {
+    @apply text-[10px] opacity-80 tracking-[1px] mt-1 uppercase;
+  }
+
+  .credential-pill {
+    @apply inline-flex items-center gap-2 bg-secondary-400/8 border border-secondary-400/3 py-2 px-3.5 text-[12px] text-secondary-400 font-semibold tracking-[0.5] mt-1 mr-1 mb-1 ml-0 transition-all duration-500 hover:bg-secondary-400 hover:text-white;
+  }
+
+  .credential-pill svg {
+    @apply w-3.5 h-3.5 shrink-0;
+  }
+
+  .bio-text {
+    @apply text-sm text-[#555] leading-[1.85] mb-4;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .vision-item {
+    @apply flex gap-3.5 items-start py-3 px-0 border-b border-[#f0ede4];
+  }
+
+  .vision-item:last-child {
+    @apply border-b-0;
+  }
+
+  .vision-dot {
+    @apply w-2 h-2 bg-secondary-400 shrink-0 mt-1.5;
+  }
+
+  .exec-section {
+    @apply py-25 px-0 bg-[#f8f7f4];
+  }
+
+  .vp-section {
+    @apply py-25 px-0 bg-white;
+  }
+
+  .vp-section .grid {
+    @apply items-start;
+  }
+
+  .vp-card {
+    @apply flex flex-col h-auto bg-white border border-[#e8e4da] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden;
+  }
+
+  .vp-card:hover {
+    @apply shadow-[0_16px_48px_rgba(0,0,0,0.01)] -translate-y-1.5;
+  }
+
+  .vp-card:hover .vp-img img {
+    @apply scale-105;
+  }
+
+  .vp-img {
+    @apply relative h-105 overflow-hidden bg-[#0a1628];
+  }
+
+  .vp-img img {
+    @apply w-full h-full object-cover object-top transition-transform duration-700;
+  }
+
+  .vp-card:hover .vp-img img {
+    @apply scale-110;
+  }
+
+  .vp-img-placeholder {
+    @apply w-full h-full flex items-center justify-center;
+    background: linear-gradient(
+      135deg,
+      var(--color-brand-800) 0%,
+      #152d5a 100%
+    );
+  }
+
+  .vp-img-placeholder span {
+    @apply font-pro text-[56px] font-bold text-secondary-400/4 tracking-[2px];
+  }
+
+  .vp-role-tag {
+    @apply absolute bottom-0 left-0 right-0 pt-1 px-5 pb-4;
+    background: linear-gradient(transparent, rgba(6, 17, 31, 0.85));
+  }
+
+  .vp-role-text {
+    @apply text-[10px] font-bold tracking-[2px] uppercase text-secondary-400;
+  }
+
+  .vp-body {
+    @apply pt-6 px-6 pb-7;
+  }
+
+  .vp-name {
+    @apply font-pro text-[19px] font-bold text-brand-700 mb-1 leading-[1.2];
+  }
+
+  .vp-title {
+    @apply text-[11px] font-bold tracking-[1.5px] uppercase text-secondary-400 mb-3.5 pb-3.5 border-b border-[#f0ede4];
+  }
+
+  .vp-bio {
+    @apply text-[13px] text-[#666] leading-[1.75];
+  }
+
+  .vp-detail-btn {
+    @apply flex items-center gap-2 mt-4.5 text-[12px] font-bold tracking-[1px] uppercase text-secondary-400 cursor-pointer border-none bg-none p-0 transition-all duration-300;
+  }
+
+  .vp-detail-btn:hover {
+    @apply gap-3.5;
+  }
+
+  .vp-expand {
+    @apply max-h-0 overflow-hidden transition-[max-height] duration-500 ease-in-out bg-[#faf9f6];
+  }
+
+  .vp-expand.open {
+    @apply max-h-250 p-4 border-t border-[#f0ede4];
+  }
+
+  .vp-exp-text {
+    @apply text-[13px] text-[#666] leading-[1.75];
+  }
+
+  .stat-mini-card {
+    @apply p-5 bg-white border border-[#e8e4da] text-center transition-all duration-500;
+  }
+
+  .stat-mini-card:hover {
+    @apply border-secondary-400 shadow-lg -translate-y-1;
+  }
+
+  .stat-mini-card .stat-icon-gold {
+    @apply font-pro text-3xl font-bold text-secondary-400 mb-1 block transition-transform duration-500;
+  }
+
+  .stat-mini-card:hover .stat-icon-gold {
+    @apply scale-110;
+  }
+
+  .president-overlay {
+    @apply absolute bottom-0 left-0 right-0 py-10 px-8 transition-opacity duration-700;
+    background: linear-gradient(
+      to top,
+      rgba(6, 17, 31, 0.95) 0%,
+      rgba(6, 17, 31, 0.6) 50%,
+      transparent 100%
+    );
+  }
+
+  .exp-tag {
+    @apply inline-block text-[9px] font-bold tracking-[1px] uppercase text-brand-800 bg-secondary-400/10 border border-secondary-400/20 py-1 px-2 mb-2 mr-2;
+  }
+
+  .md-section {
+    @apply py-25 px-0 bg-brand-800 relative overflow-hidden;
+  }
+
+  .md-section::before {
+    content: "";
+    @apply absolute inset-0 bg-center bg-cover bg-no-repeat opacity-5 pointer-events-none;
+  }
+
+  .md-image-container {
+    @apply relative transition-all duration-1000 ease-out;
+  }
+
+  .md-image-container img {
+    @apply border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)];
+  }
+
+  .md-badge-floating {
+    @apply absolute -top-4 -right-4 w-24 h-24 bg-secondary-400 flex items-center justify-center text-center p-3 
+           shadow-[0_10px_30px_rgba(201,152,42,0.3)] z-20 animate-pulse-slow;
+  }
+
+  .md-stat-box {
+    @apply border border-white/10 p-5 text-center transition-colors duration-500 hover:bg-white/5 hover:border-secondary-400/50;
+  }
+
+  @keyframes pulse-slow {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+  }
+  .animate-pulse-slow {
+    animation: pulse-slow 4s infinite ease-in-out;
+  }
+
+  .stats-bar {
+    @apply bg-brand-800 py-15 px-0 border-white/5;
+  }
+
+  .stat-col {
+    @apply text-center border-r border-white/10 px-6 transition-all duration-700 last:border-r-0 max-lg:border-r-0 max-lg:mb-10 last:mb-0;
+  }
+
+  .stat-col.animate-on-scroll {
+    @apply opacity-0 translate-y-4;
+  }
+
+  .stat-col.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+
+  .stat-col:last-child {
+    @apply border-r-0;
+  }
+
+  .stat-num {
+    @apply font-pro text-5xl md:text-6xl font-bold text-secondary-400 leading-none mb-3 tracking-tight;
+  }
+
+  .stat-label {
+    @apply text-[10px] md:text-[11px] text-white/40 tracking-[3px] uppercase font-medium;
+  }
 }
 
 /* ============================ Utilities ============================ */
@@ -1652,7 +1922,8 @@
   .stat-item,
   .value-card,
   .timeline-item,
-  .service-card-sm {
+  .service-card-sm,
+  .vp-card {
     opacity: 0;
     transform: translateY(30px) scale(0.98);
     filter: blur(5px);
@@ -1660,6 +1931,12 @@
       opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
       transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
       filter 0.8s ease;
+
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
   }
 
   .is-visible {

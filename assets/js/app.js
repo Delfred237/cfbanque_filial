@@ -353,4 +353,30 @@ document.addEventListener("DOMContentLoaded", () => {
     for (let i = 1; i <= 2; i++)
       document.getElementById("line-" + i).className = "step-line done";
   };
+
+  /* ─── 11. VP EXPAND TOGGLE ─── */
+  window.toggleExpand = function (btn) {
+    const card = btn.closest(".vp-card");
+    const exp = card.querySelector(".vp-expand");
+    const isOpen = exp.classList.contains("open");
+
+    // Fermer les autres profils ouverts (Optionnel - pour un effet Accordéon)
+    document.querySelectorAll(".vp-expand.open").forEach((el) => {
+      if (el !== exp) {
+        el.classList.remove("open");
+        el.closest(".vp-card").querySelector("svg").style.transform = "";
+      }
+    });
+
+    exp.classList.toggle("open");
+
+    // Animation de l'icône
+    const svg = btn.querySelector("svg");
+    svg.style.transform = isOpen ? "rotate(0deg)" : "rotate(90deg)";
+
+    // Changement de texte
+    btn.querySelector(".vp-detail-btn").innerText = isOpen
+      ? "Full Profile"
+      : "Close Profile";
+  };
 });

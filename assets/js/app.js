@@ -290,7 +290,6 @@ document.addEventListener("DOMContentLoaded", () => {
       accordionBody.classList.toggle("is-open");
 
       // 3. Rotation de la flèche (gérée par ton CSS via aria-expanded)
-      // Si tu veux forcer la rotation en JS :
       const arrow = accordionTrigger.querySelector(".accordion-arrow");
       if (arrow) {
         arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";

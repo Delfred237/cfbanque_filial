@@ -1744,26 +1744,12 @@
 
   .md-badge-floating {
     @apply absolute -top-4 -right-4 w-24 h-24 bg-secondary-400 flex items-center justify-center text-center p-3 
-           shadow-[0_10px_30px_rgba(201,152,42,0.3)] z-20 animate-pulse-slow;
+           shadow-[0_10px_30px_rgba(201,152,42,0.3)] z-20;
   }
 
   .md-stat-box {
     @apply border border-white/10 p-5 text-center transition-colors duration-500 hover:bg-white/5 hover:border-secondary-400/50;
   }
-
-  @keyframes pulse-slow {
-    0%,
-    100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
-  }
-  .animate-pulse-slow {
-    animation: pulse-slow 4s infinite ease-in-out;
-  }
-
   .stats-bar {
     @apply bg-brand-800 py-15 px-0 border-white/5;
   }

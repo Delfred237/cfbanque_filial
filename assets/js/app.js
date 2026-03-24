@@ -89,6 +89,31 @@ document.addEventListener("DOMContentLoaded", () => {
     startAutoSlide();
   }
 
+  window.goToSlide = function (n) {
+    slides[currentSlide].classList.remove("active");
+    dots[currentSlide].classList.remove("active");
+    currentSlide = n;
+    slides[currentSlide].classList.add("active");
+    dots[currentSlide].classList.add("active");
+  };
+
+  window.nextSlide = function () {
+    goToSlide((currentSlide + 1) % slides.length);
+    resetAutoSlide();
+  };
+
+  window.prevSlide = function () {
+    goToSlide((currentSlide - 1 + slides.length) % slides.length);
+    resetAutoSlide();
+  };
+
+  window.resetAutoSlide = function () {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, 6000);
+  };
+
+  autoSlideInterval = setInterval(nextSlide, 6000);
+
   /* ─── 4. TESTIMONIALS ─── */
   const testimonials = document.querySelectorAll(".testimonial-slide");
   const tdots = document.querySelectorAll('[id^="tdot-"]');
@@ -161,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isNaN(target)) return;
 
     let count = 0;
-    const duration = 2000;
+    const duration = 1000;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     const increment = target / totalFrames;

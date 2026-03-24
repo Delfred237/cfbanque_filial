@@ -565,7 +565,7 @@
   }
 
   .stat-box {
-    @apply bg-secondary-400 text-white py-8 px-10 absolute -bottom-8 -right-8 z-20 
+    @apply bg-secondary-400 text-white py-8 px-10 flex flex-col items-center absolute -bottom-8 -right-8 z-20 
            shadow-[20px_20px_60px_rgba(0,0,0,0.1)] transition-transform duration-500;
   }
 
@@ -1851,7 +1851,7 @@
     opacity: 0;
     visibility: hidden;
   }
-  
+
   .scroll-progress-container {
     position: fixed;
     top: 80px;

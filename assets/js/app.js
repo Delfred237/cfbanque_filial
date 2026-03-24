@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const REVEAL_CONFIG = {
     threshold: 0.15,
     rootMargin: "0px 0px -80px 0px",
-    staggerDelay: 50,
+    staggerDelay: 20,
   };
 
   /* ─── 2. GESTION NAVIGATION & SCROLL ─── */

@@ -824,6 +824,34 @@
     @apply text-secondary-400 pl-1.5;
   }
 
+  .office {
+    @apply flex gap-3;
+  }
+
+  .office-flag {
+    @apply w-8 h-8 shrink-0 bg-[rgba(201,152,42,0.1)] border border-[rgba(201,152,42,0.25)] flex items-center justify-center text-[15px] mt-0 transition-all duration-300;
+  }
+
+  .office:hover .office-flag {
+    @apply bg-secondary-400 border-secondary-400;
+  }
+
+  .office-title {
+    @apply text-[12px] font-semibold text-white mb-1 tracking-wide;
+  }
+
+  .office-content {
+    @apply text-[11px] text-[rgba(255,255,255,0.45)] leading-[1.7];
+  }
+
+  .office-link-tel {
+    @apply block text-[11px] text-[rgba(255,255,255,0.45)] hover:text-secondary-400 hover:pl-2 transition-all mt-1;
+  }
+
+  .office-link-email {
+    @apply block text-[11px] text-[rgba(255,255,255,0.45)] hover:text-secondary-400 hover:pl-2 transition-all;
+  }
+
   .social-btn {
     @apply w-6 h-6 border border-[rgba(255,255,255,0.5)] flex items-center justify-center text-[rgba(255,255,255,0.5)] text-sm cursor-pointer transition-all duration-300;
   }

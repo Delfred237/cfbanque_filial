@@ -430,4 +430,12 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollBar.style.width = scrolled + "%";
     }
   });
+
+  window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+    // On attend un tout petit peu pour laisser les animations du Hero commencer
+    setTimeout(() => {
+      preloader.classList.add("loader-hidden");
+    }, 500);
+  });
 });

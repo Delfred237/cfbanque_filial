@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Reveal Configuration
   const REVEAL_CONFIG = {
     threshold: 0.15,
-    rootMargin: "0px 0px -80px 0px",
-    staggerDelay: 20,
+    rootMargin: "0px 0px -50px 0px",
+    staggerDelay: 2,
   };
 
   /* ─── 2. GESTION NAVIGATION & SCROLL ─── */
@@ -186,7 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isNaN(target)) return;
 
     let count = 0;
-    const duration = 1000;
+    const duration = 1500;
     const frameRate = 1000 / 60;
     const totalFrames = Math.round(duration / frameRate);
     const increment = target / totalFrames;

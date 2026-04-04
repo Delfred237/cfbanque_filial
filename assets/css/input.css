@@ -372,7 +372,8 @@
     @apply absolute inset-0 w-full h-full object-cover object-center;
   }
 
-  .slide.active .slide-bg {
+  .slide.active .slide-bg,
+    .slide.active .slide-bg-img {
     transform: scale(1);
     animation: ken-burns 10s ease-out forwards;
   }
@@ -512,6 +513,7 @@
 
   .feature-title {
     @apply font-pro text-xl font-semibold text-white mb-3 tracking-wide;
+    animation: text-reveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   .feature-desc {

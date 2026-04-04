@@ -373,7 +373,7 @@
   }
 
   .slide.active .slide-bg,
-    .slide.active .slide-bg-img {
+  .slide.active .slide-bg-img {
     transform: scale(1);
     animation: ken-burns 10s ease-out forwards;
   }
@@ -2043,7 +2043,7 @@
     }
   }
 
-  .reveal,
+  /* .reveal,
   .feature-item,
   .about-section,
   .service-panel,
@@ -2068,7 +2068,7 @@
       transform: translateY(0) scale(1);
       filter: blur(0);
     }
-  }
+  } */
 
   .is-visible {
     opacity: 1;
